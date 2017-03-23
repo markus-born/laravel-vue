@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "<%= fontName %>";
+    src: url('<%= fontPath %><%= fontName %>.eot');
+    src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+         url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+         url('<%= fontPath %><%= fontName %>.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.<%= cssClass %> {
+    font-family: "<%= fontName %>";
+    vertical-align: middle;
+}
+
+.<%= cssClass %>:before {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+    text-decoration: none;
+    text-transform: none;
+}
+
+.<%= cssClass %>-lg {
+    font-size: 1.3333333333333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+.<%= cssClass %>-2x { font-size: 2em; }
+.<%= cssClass %>-3x { font-size: 3em; }
+.<%= cssClass %>-4x { font-size: 4em; }
+.<%= cssClass %>-5x { font-size: 5em; }
+.<%= cssClass %>-fw {
+    width: 1.2857142857142858em;
+    text-align: center;
+}
+
+<% _.each(glyphs, function(glyph) { %>.<%= cssClass %>-<%= glyph.fileName.split('.')[1] %>:before { content: "\<%= glyph.codePoint %>" }
+<% }); %>

@@ -1,0 +1,273 @@
+@font-face {
+    font-family: "fontelicons";
+    src: url('../fonts/fontelicons.eot');
+    src: url('../fonts/fontelicons.eot?#iefix') format('eot'),
+         url('../fonts/fontelicons.woff') format('woff'),
+         url('../fonts/fontelicons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ico {
+    font-family: "fontelicons";
+    vertical-align: middle;
+}
+
+.ico:before {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+    text-decoration: none;
+    text-transform: none;
+}
+
+.ico-lg {
+    font-size: 1.3333333333333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+.ico-2x { font-size: 2em; }
+.ico-3x { font-size: 3em; }
+.ico-4x { font-size: 4em; }
+.ico-5x { font-size: 5em; }
+.ico-fw {
+    width: 1.2857142857142858em;
+    text-align: center;
+}
+
+.ico-kategorije-automobili:before { content: "\E001" }
+.ico-kategorije-motori:before { content: "\E002" }
+.ico-kategorije-transport:before { content: "\E003" }
+.ico-kategorije-poljoprivreda:before { content: "\E004" }
+.ico-kategorije-radne-masine:before { content: "\E005" }
+.ico-kategorije-nautika:before { content: "\E006" }
+.ico-kategorije-ostale-kategorije:before { content: "\E007" }
+.ico-kategorije-servis-i-usluge:before { content: "\E008" }
+.ico-top-meni-google-play:before { content: "\E009" }
+.ico-top-meni-sms-oglasi:before { content: "\E00A" }
+.ico-top-meni-apple-store:before { content: "\E00B" }
+.ico-top-meni-kontakt:before { content: "\E00C" }
+.ico-top-meni-prijavi-se:before { content: "\E00D" }
+.ico-top-meni-registruj-se:before { content: "\E00E" }
+.ico-gavni-meni-home:before { content: "\E00F" }
+.ico-gavni-meni-dropdown-strelica:before { content: "\E010" }
+.ico-gavni-meni-pogledaj-sve-kategorije:before { content: "\E011" }
+.ico-gavni-meni-listanje-novosti-prethodna:before { content: "\E012" }
+.ico-gavni-meni-listanje-novosti-sledeca:before { content: "\E013" }
+.ico-pretraga-text-search-dropdown-strelica:before { content: "\E014" }
+.ico-pretraga-text-search-lupa:before { content: "\E015" }
+.ico-pretraga-polja-dropdown-strelica:before { content: "\E016" }
+.ico-pretraga-polja-lupa:before { content: "\E017" }
+.ico-pretraga-detaljna-dropdown-strelica:before { content: "\E018" }
+.ico-filter-novo-u-24h:before { content: "\E019" }
+.ico-filter-pala-cijena:before { content: "\E01A" }
+.ico-filter-zamjena:before { content: "\E01B" }
+.ico-filter-hitno:before { content: "\E01C" }
+.ico-filter-prikaz-grid-ikonice:before { content: "\E01D" }
+.ico-filter-prikaz-grid-tekst:before { content: "\E01E" }
+.ico-filter-prikaz-lista-ikonice:before { content: "\E01F" }
+.ico-filter-sacuvaj-pretragu:before { content: "\E020" }
+.ico-oglas-kilometraza:before { content: "\E021" }
+.ico-oglas-kubikaza:before { content: "\E022" }
+.ico-oglas-gorivo:before { content: "\E023" }
+.ico-oglas-mjenjac:before { content: "\E024" }
+.ico-oglas-godiste:before { content: "\E025" }
+.ico-oglas-kamera-megapixel-mobilni-tablet:before { content: "\E026" }
+.ico-oglas-ram-memorija:before { content: "\E027" }
+.ico-oglas-rom-memorija:before { content: "\E028" }
+.ico-oglas-hdd-disk:before { content: "\E029" }
+.ico-oglas-ssd-disk:before { content: "\E02A" }
+.ico-oglas-rezolucija-monitor-televizor:before { content: "\E02B" }
+.ico-oglas-vrijeme-odziva-monitor-televizor:before { content: "\E02C" }
+.ico-oglas-senzor-foto-aparata:before { content: "\E02D" }
+.ico-oglas-zoom-foto-video-kamera:before { content: "\E02E" }
+.ico-oglas-iso-foto-aparata:before { content: "\E02F" }
+.ico-oglas-senzor-video-kamera:before { content: "\E030" }
+.ico-oglas-rezolucija-video-kamera:before { content: "\E031" }
+.ico-oglas-ostale-kategorije:before { content: "\E032" }
+.ico-oglas-servisi-i-usluge:before { content: "\E033" }
+.ico-oglas-strelica-kategorija:before { content: "\E034" }
+.ico-lokacija:before { content: "\E035" }
+.ico-prodavnica:before { content: "\E036" }
+.ico-adresar:before { content: "\E037" }
+.ico-detaljnije:before { content: "\E038" }
+.ico-telefonska-podrska:before { content: "\E039" }
+.ico-footer-facebook:before { content: "\E03A" }
+.ico-footer-twitter:before { content: "\E03B" }
+.ico-footer-instagram:before { content: "\E03C" }
+.ico-footer-dodaj-oglas:before { content: "\E03D" }
+.ico-share-facebook:before { content: "\E03E" }
+.ico-share-twitter:before { content: "\E03F" }
+.ico-share-google-plus:before { content: "\E040" }
+.ico-share-whatsapp:before { content: "\E041" }
+.ico-share-viber:before { content: "\E042" }
+.ico-share-email:before { content: "\E043" }
+.ico-user-telefon:before { content: "\E044" }
+.ico-user-poruke:before { content: "\E045" }
+.ico-user-email:before { content: "\E046" }
+.ico-user-javna-pitanja:before { content: "\E047" }
+.ico-user-sacuvaj-oglas:before { content: "\E048" }
+.ico-user-sacuvaj-korisnika:before { content: "\E049" }
+.ico-user-prijavi-oglas:before { content: "\E04A" }
+.ico-user-svi-oglasi-prodavca:before { content: "\E04B" }
+.ico-user-oglasi-u-tvojoj-blizini:before { content: "\E04C" }
+.ico-user-lokacija:before { content: "\E04D" }
+.ico-user-verifikacija-mobilnog:before { content: "\E04E" }
+.ico-user-verifikacija-email:before { content: "\E04F" }
+.ico-user-verifikacija-lokacije:before { content: "\E050" }
+.ico-user-avatar-musko:before { content: "\E051" }
+.ico-user-avatar-zensko:before { content: "\E052" }
+.ico-user-avatar-prodavnica:before { content: "\E053" }
+.ico-user-avatar-adresar:before { content: "\E054" }
+.ico-user-fiksni-telefon:before { content: "\E055" }
+.ico-user-fax:before { content: "\E056" }
+.ico-prodavnica-radno-vrijeme:before { content: "\E057" }
+.ico-prodavnica-vise-lokacija:before { content: "\E058" }
+.ico-datum:before { content: "\E059" }
+.ico-ima:before { content: "\E05A" }
+.ico-nazad:before { content: "\E05B" }
+.ico-info-popup:before { content: "\E05C" }
+.ico-ponudi-cijenu:before { content: "\E05D" }
+.ico-dostava:before { content: "\E05E" }
+.ico-tab-slicni-oglasi:before { content: "\E05F" }
+.ico-tab-specifikacija:before { content: "\E060" }
+.ico-tab-fotografije:before { content: "\E061" }
+.ico-ima-viber:before { content: "\E062" }
+.ico-ima-whatsapp:before { content: "\E063" }
+.ico-oglas-baterija:before { content: "\E064" }
+.ico-kategorije-tastatura:before { content: "\E065" }
+.ico-kategorije-mis:before { content: "\E066" }
+.ico-kategorije-procesor:before { content: "\E067" }
+.ico-kategorije-graficka-karta:before { content: "\E068" }
+.ico-kategorije-maticna-ploca:before { content: "\E069" }
+.ico-kategorije-kuciste:before { content: "\E06A" }
+.ico-kategorije-zvucna-kartica:before { content: "\E06B" }
+.ico-kategorije-mrezna-kartica:before { content: "\E06C" }
+.ico-kategorije-napajanje:before { content: "\E06D" }
+.ico-kategorije-hladnjak:before { content: "\E06E" }
+.ico-kategorije-opticki-uredjaj:before { content: "\E06F" }
+.ico-kategorije-web-kamera:before { content: "\E070" }
+.ico-kategorije-bluetooth:before { content: "\E071" }
+.ico-kategorije-usb-flash:before { content: "\E072" }
+.ico-kategorije-memorijska-kartica:before { content: "\E073" }
+.ico-kategorije-citac-kartica:before { content: "\E074" }
+.ico-kategorije-nas:before { content: "\E075" }
+.ico-kategorije-hdd-rack:before { content: "\E076" }
+.ico-kategorije-opticki-mediji-cd-dvd:before { content: "\E077" }
+.ico-kategorije-konzole:before { content: "\E078" }
+.ico-kategorije-gamepad:before { content: "\E079" }
+.ico-kategorije-dzojstik:before { content: "\E07A" }
+.ico-kategorije-volan:before { content: "\E07B" }
+.ico-kategorije-game:before { content: "\E07C" }
+.ico-kategorije-vr:before { content: "\E07D" }
+.ico-kategorije-objektivi:before { content: "\E07E" }
+.ico-kategorije-filteri:before { content: "\E07F" }
+.ico-kategorije-blicevi:before { content: "\E080" }
+.ico-kategorije-stativi:before { content: "\E081" }
+.ico-kategorije-kucista-za-kamere-i-aparate:before { content: "\E082" }
+.ico-kategorije-dodaci-za-kamere-i-aparate:before { content: "\E083" }
+.ico-kategorije-tv-box:before { content: "\E084" }
+.ico-kategorije-divx-dvd-plejer:before { content: "\E085" }
+.ico-kategorije-tv-nosac:before { content: "\E086" }
+.ico-kategorije-tv-daljinski:before { content: "\E087" }
+.ico-kategorije-tv-antena:before { content: "\E088" }
+.ico-kategorije-satelitska-antena:before { content: "\E089" }
+.ico-kategorije-motor-za-satelitsku:before { content: "\E08A" }
+.ico-kategorije-3d-naocare:before { content: "\E08B" }
+.ico-kategorije-projektor:before { content: "\E08C" }
+.ico-kategorije-platno-za-projektor:before { content: "\E08D" }
+.ico-kategorije-nosac-za-projektor:before { content: "\E08E" }
+.ico-kategorije-presenter-za-projektor:before { content: "\E08F" }
+.ico-kategorije-lampa-za-projektor:before { content: "\E090" }
+.ico-registracija-korisnik:before { content: "\E091" }
+.ico-registracija-prodavnica:before { content: "\E092" }
+.ico-registracija-autoplac:before { content: "\E093" }
+.ico-registracija-autosalon:before { content: "\E094" }
+.ico-nema:before { content: "\E095" }
+.ico-moj-profil:before { content: "\E096" }
+.ico-moji-oglasi:before { content: "\E097" }
+.ico-izloguj-se:before { content: "\E098" }
+.ico-novost-poslednje:before { content: "\E099" }
+.ico-novost-komentari:before { content: "\E09A" }
+.ico-novost-pregledi:before { content: "\E09B" }
+.ico-odgovor:before { content: "\E09C" }
+.ico-novost-odgovor-komentar:before { content: "\E09D" }
+.ico-novost-like:before { content: "\E09E" }
+.ico-novost-dislike:before { content: "\E09F" }
+.ico-novost-izvor:before { content: "\E0A0" }
+.ico-obrisati:before { content: "\E0A1" }
+.ico-primljene-poruke:before { content: "\E0A2" }
+.ico-poslate-poruke:before { content: "\E0A3" }
+.ico-sifra-login:before { content: "\E0A4" }
+.ico-vise-lokacija:before { content: "\E0A5" }
+.ico-dodaj-prilog:before { content: "\E0A6" }
+.ico-izmijeni-oglas:before { content: "\E0A7" }
+.ico-promovisi-oglas:before { content: "\E0A8" }
+.ico-obnovi-oglas:before { content: "\E0A9" }
+.ico-pauziraj-oglas:before { content: "\E0AA" }
+.ico-prodat-oglas:before { content: "\E0AB" }
+.ico-istekao-oglas:before { content: "\E0AC" }
+.ico-kategorije-ruter-access-pont:before { content: "\E0AD" }
+.ico-kategorije-wireless-antene:before { content: "\E0AE" }
+.ico-kategorije-wireless-kartice:before { content: "\E0AF" }
+.ico-kategorije-wireless-ekstenderi:before { content: "\E0B0" }
+.ico-kategorije-svicer:before { content: "\E0B1" }
+.ico-kategorije-3g-4g-modemi:before { content: "\E0B2" }
+.ico-kategorije-komplet-video-nadzor:before { content: "\E0B3" }
+.ico-kategorije-kamere-video-nadzor:before { content: "\E0B4" }
+.ico-kategorije-mrezni-video-rekorderi-video-nadzor:before { content: "\E0B5" }
+.ico-kategorije-ic-reflektori-video-nadzor:before { content: "\E0B6" }
+.ico-kategorije-kucista i nosaci-video-nadzor:before { content: "\E0B7" }
+.ico-kategorije-mrezna-napajanja-video-nadzor:before { content: "\E0B8" }
+.ico-kategorije-komplet-alarmni-sistemi:before { content: "\E0B9" }
+.ico-kategorije-alarmna-centrala:before { content: "\E0BA" }
+.ico-kategorije-senzori-alarmni-sistemi:before { content: "\E0BB" }
+.ico-kategorije-sirene-alarmni-sistemi:before { content: "\E0BC" }
+.ico-kategorije-sifrarnici-alarmni-sistemi:before { content: "\E0BD" }
+.ico-kategorije-interfon-alarmni-sistemi:before { content: "\E0BE" }
+.ico-kategorije-zvucnici:before { content: "\E0BF" }
+.ico-kategorije-slusalice:before { content: "\E0C0" }
+.ico-kategorije-mikrofoni:before { content: "\E0C1" }
+.ico-kategorije-mini-linija:before { content: "\E0C2" }
+.ico-kategorije-radio-cd:before { content: "\E0C3" }
+.ico-kategorije-plejeri:before { content: "\E0C4" }
+.ico-kategorije-pojacala:before { content: "\E0C5" }
+.ico-kategorije-mikseta:before { content: "\E0C6" }
+.ico-kategorije-gramofoni:before { content: "\E0C7" }
+.ico-kategorije-risiveri:before { content: "\E0C8" }
+.ico-kategorije-diktafon:before { content: "\E0C9" }
+.ico-kategorije-dac-uredjaji:before { content: "\E0CA" }
+.ico-kategorije-radio-tranzistor:before { content: "\E0CB" }
+.ico-kategorije-radio-satovi:before { content: "\E0CC" }
+.ico-kategorije-mp3-plejeri:before { content: "\E0CD" }
+.ico-kategorije-stampac:before { content: "\E0CE" }
+.ico-kategorije-multifunkcionalni-stampac:before { content: "\E0CF" }
+.ico-kategorije-skener:before { content: "\E0D0" }
+.ico-kategorije-tel-fax-voip:before { content: "\E0D1" }
+.ico-kategorije-ketridzi:before { content: "\E0D2" }
+.ico-kategorije-toneri:before { content: "\E0D3" }
+.ico-kategorije-ups:before { content: "\E0D4" }
+.ico-kategorije-stabilizatori-struje:before { content: "\E0D5" }
+.ico-kategorije-programi:before { content: "\E0D6" }
+.ico-kategorije-operativni-sistemi:before { content: "\E0D7" }
+.ico-kategorije-maske-oklopi:before { content: "\E0D8" }
+.ico-kategorije-torbe:before { content: "\E0D9" }
+.ico-kategorije-kablovi:before { content: "\E0DA" }
+.ico-kategorije-punjaci:before { content: "\E0DB" }
+.ico-kategorije-baterije:before { content: "\E0DC" }
+.ico-kategorije-ekrani:before { content: "\E0DD" }
+.ico-kategorije-servis-usluge:before { content: "\E0DE" }
+.ico-kategorije-otkup:before { content: "\E0DF" }
+.ico-javna-pitanja-sve:before { content: "\E0E0" }
+.ico-javna-pitanja-neodgovoreno:before { content: "\E0E1" }
+.ico-javna-pitanja-odgovoreno:before { content: "\E0E2" }
+.ico-sacuvaj-oglas:before { content: "\E0E3" }
+.ico-checkbox:before { content: "\E0E4" }
+.ico-klik:before { content: "\E0E5" }
+.ico-registracija-autootpad:before { content: "\E0E6" }
+.ico-registracija-adresar:before { content: "\E0E7" }

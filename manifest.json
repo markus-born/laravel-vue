@@ -1,0 +1,14 @@
+{
+  "name": "Autodiler Beta",
+  "short_name": "Autodiler",
+  "icons": [{
+      "src": "/public/logo.png",
+      "sizes": "265x90",
+      "type": "image/png"
+    }
+   ],
+  "start_url": "/",
+  "background_color": "#f2f3f5",
+  "display": "standalone",
+  "theme_color": "#f60"
+}

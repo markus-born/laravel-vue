@@ -1,0 +1,299 @@
+/*
+ * Header styles
+*/
+
+.prijavi-se-popup {
+	position: absolute;
+	z-index: 20;
+	right: 0;
+	top: 30px;
+	width: 550px;
+	background: white;
+	border: 3px solid $color-text;
+
+	label {
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 3px;
+
+		span {
+			color: $color-primary;
+		}
+	}
+
+	input {
+		width: 170px;
+		height: 37px;
+		padding: 0px 5px;
+		border: 1px solid #dcdae5;
+		border-left: 0;
+	}
+
+	
+}
+
+.prijavi-se-popup-main {
+	float: left;
+  width: 100%;
+  padding: 10px 30px;
+}
+
+
+.prijavi-se-popup-form {
+	float: left;
+	width: 230px;
+	padding: 10px;
+
+	i {
+		width: 37px;
+		height: 37px;
+		margin-top: -2px;
+		text-align: center;
+		background: #fafafa;
+		font-size: 18px;
+		line-height: 33px;
+		border: 1px solid #dcdae5;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 18px;
+		text-align: center;
+	}
+
+	button {
+		background: $color-primary;
+		border: 0;
+		font-weight: bold;
+		font-size: 16px;
+		color: $color-white;
+		padding: 10px;
+		margin-top: 15px;
+		cursor: pointer;
+		border-radius: 3px;
+
+		@include hover-active-focus {
+			background: $color-text;
+		}
+	}
+}
+
+.prijavi-se-popup-ili {
+	width: 44px;
+	float: left;
+	text-align: center;
+	color: #999;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 50px;
+	margin-left: 7px;
+	margin-right: 7px;
+	height: 130px;
+
+	p {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		border: 1px solid #dcdae5;
+		border-radius: 50%;
+		position: relative;
+		margin-top: 50px;
+
+		&::before {
+			content: '';
+			width: 1px;
+			height: 50px;
+			background: #dcdae5;
+			position: absolute;
+			top: -50px;
+			left: 50%;
+		}
+
+		&::after {
+			content: '';
+			width: 1px;
+			height: 50px;
+			background: #dcdae5;
+			position: absolute;
+			bottom: -50px;
+			left: 50%;
+		}
+	}
+}
+
+.prijavi-se-popup-drustvene-mreze {
+	float: left;
+	width: 190px;
+	padding: 10px;
+	text-align: center;
+	line-height: 110%;
+
+	a {
+		display: block;
+		color: $color-white;
+		padding: 12px;
+		margin-top: 17px;
+		text-align: left;
+
+		i { 
+		  background: none;
+	    border: 0;
+	    line-height: 145%;
+	    height: auto;
+	    width: 20px;
+	    margin-top: 0;
+	    text-align: left;
+	    margin-right: 10px;
+	    padding: 0px 20px;
+	    padding-left: 8px;
+	    font-size: 13px;
+	  }
+
+		&:first-of-type {
+			background: $color-facebook;
+
+			@include hover-active-focus {
+				background: darken($color-facebook, 10%);
+			}
+
+			i {
+				border-right: 1px solid darken($color-facebook, 5%);
+			}
+		}
+
+		&:last-of-type {
+			background: $color-google-plus;
+
+			@include hover-active-focus {
+				background: darken($color-google-plus, 10%);
+			}
+
+			i {
+				border-right: 1px solid darken($color-google-plus, 5%);
+				margin-left: -5px;
+				padding-right: 26px;
+			}
+		}
+
+
+	}
+}
+
+.prijavi-se-popup-registracija {
+	float: left;
+	width: 100%;
+	text-align: center;
+	background: #f9f9f9;
+	border-top: 1px solid #dcdae5;
+	border-bottom: 1px solid #dcdae5;
+	font-size: 16px;
+
+	a {
+		color: $color-text;
+		text-transform: uppercase;
+		font-weight: bold;
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+
+		@include hover-active-focus {
+			background: $color-primary;
+			color: $color-white;
+		}
+	}
+
+}
+
+.prijavi-se-popup-registracija-footer {
+	float: left;
+	width: 100%;
+	padding: 8px;
+}
+
+.prijavi-se-popup-registracija-footer-item {
+	float: left;
+	width: 176px;
+	font-size: 16px;
+
+	i {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 29px;
+		background: $color-text;
+		color: $color-white;
+		vertical-align: middle;
+		margin-right: 3px;
+	}
+
+	p {
+		width: 130px;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 100%;
+	}
+
+	a {
+		display: inline-block;
+		vertical-align: middle;
+		color: $color-text;
+		margin-left: 5px;
+		width: 100%;
+
+		@include hover-active-focus {
+			color: $color-primary;
+
+			i {
+				background: $color-primary;
+				color: $color-white;
+			}
+		}
+	}
+
+}
+
+.logo {
+	width: 268px;
+	height: 93px;
+	float: left;
+	padding-left: 2px;
+
+	img {
+		position: relative;
+		bottom: 30px;
+	}
+}
+
+.banner {
+	float: left;
+	margin-left: 1px;
+}
+
+.language {
+
+	float: right;
+	position: relative;
+	z-index: 1;
+	margin-right: 3px;
+
+	a {
+		background: url('../img/sprite.png');
+		width: 26px;
+		height: 26px;
+	}
+
+	.lang-mne {
+		background-position: 0px 0px;
+	}
+
+	.lang-eng {
+		background-position: 61px 0;
+	}
+
+	.lang-rus {
+		background-position: 35px 0;
+	}
+}

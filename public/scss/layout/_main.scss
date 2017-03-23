@@ -1,0 +1,6013 @@
+/*
+ * INDEX STYLE
+*/
+
+.main {
+	width: 692px;
+	margin: 3px 2px 1px 3px;
+	float: left;
+}
+
+.kategorije {
+	border: 1px solid $color-text;
+}
+
+.kategorije-item {
+	width: 83px;
+	float: left;
+	height: 75px;
+	background: #ddd;
+	position: relative;
+	text-align: center;
+	margin-right: 1px;
+
+	&:nth-of-type(1) {
+		width: 73px;
+	}
+
+	&:nth-of-type(2) {
+		width: 92px;
+	}
+
+	&:nth-of-type(3) {
+		width: 74px;
+	}
+
+	&:nth-of-type(4) {
+		width: 86px;
+	}
+
+	&:nth-of-type(5) {
+		width: 92px;
+	}
+
+	&:nth-of-type(6) {
+		width: 72px;
+	}
+
+	&:nth-of-type(7) {
+		width: 103px;
+	}
+
+	&:nth-of-type(8) {
+		width: 91px;
+		margin-right: 0;
+	}
+
+
+	&.active {
+		i {
+			color: $color-white;
+		}
+
+		.kategorije-item-icon {
+			background: $color-text;
+		}
+
+		.kategorije-item-text {
+			background: $color-primary;
+			color: $color-white;
+		}
+	}
+
+	@include hover-active-focus {
+		i {
+			color: $color-white;
+		}
+
+		.kategorije-item-icon {
+			background: $color-text;
+		}
+
+		.kategorije-item-text {
+			background: $color-primary;
+			color: $color-white;
+		}
+	}
+
+	a {
+		width: 100%;
+		height: 100%;
+	}
+
+	i {
+		font-size: 40px;
+		margin-top: 3px;
+	}
+
+	a {
+		color: $color-text;
+	}
+}
+
+.kategorije-item-icon {
+	height: 100%;
+}
+
+.kategorije-item-text {
+	background: #c0c0c0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.kategorije-pretraga {
+	padding: 15px;
+	position: relative;
+	float: left;
+  width: 100%;
+}
+
+.kategorije-pretrage-mobilni {
+	padding-bottom: 0;
+
+}
+
+.polja-pretrage {
+	// display: none; // REMOVE THIS;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	label {
+		font-size: 11px;
+    font-family: 'Open Sans';
+    display: block;
+	}
+
+	.row {
+
+		margin-bottom: 5px;
+
+		.polja-pretrage-item {
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.detaljna-polja-pretrage {
+	@extend .polja-pretrage;
+	display: block;
+
+	.row {
+
+		&:last-of-type {
+
+			margin-top: 15px;
+
+			input,
+			label {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.polja-pretrage-item {
+
+				&:last-of-type {
+					width: 150px;
+				}
+			}
+		}
+	}
+}
+
+.polja-pretrage-item {
+	float: left;
+	width: 140px;
+	margin-right: 30px;
+
+	.pretrazi-btn {
+		background: $color-text;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-top: 14px;
+		padding: 4px 16px;
+		color: $color-white;
+		position: relative;
+
+		i {
+			font-size: 23px;
+			margin-left: 8px;
+		}
+
+		&::before {
+			content: '';
+	    position: absolute;
+	    left: -5px;
+	    top: 0;
+	    width: 0;
+	    height: 0;
+	    border-bottom: 38px solid #101010;
+	    border-left: 5px solid transparent;
+		}
+
+		&::after {
+			content: '';
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    top: 0;
+	    right: -5px;
+	    border-top: 36px solid #101010;
+	    border-right: 5px solid transparent;
+		}
+
+		@include hover-active-focus {
+			background: $color-primary;
+
+			&::before {
+				border-bottom-color: $color-primary;
+			}
+
+			&::after {
+				border-top-color: $color-primary;
+			}
+		}
+
+	}
+
+	::-webkit-input-placeholder {
+		   color: #666;
+		   font-family: 'Open Sans';
+		   font-size: 11px;
+		}
+
+		:-moz-placeholder {
+		   color: #666;
+		   font-family: 'Open Sans';
+		   font-size: 11px;  
+		}
+
+		::-moz-placeholder {
+		   color: #666;
+		   font-family: 'Open Sans';
+		   font-size: 11px;
+		}
+
+		:-ms-input-placeholder {  
+		   color: #666;
+		   font-family: 'Open Sans';
+		   font-size: 11px;
+		}
+
+	label {
+		margin-bottom: 2px;
+	}
+
+	select {
+		width: 140px;
+	}
+
+	select,
+	.select-with-checkbox label {
+		border-radius: 0;
+		font-size: 11px;
+		font-family: 'Open Sans';
+		color: #666;
+	}
+
+	.select-with-checkbox {
+
+		.select-dropdown {
+			margin: 0;
+			margin-top: -3px;
+			width: 140px;
+		}
+
+		label {
+			width: 140px;
+			height: 30px;
+			padding-top: 6px;
+
+			&::after {
+				content: 'Prikaži sve';
+				font-family: 'Open Sans';
+				font-size: 11px;
+				color: #666;
+			}
+		}
+
+	}
+}
+
+.polja-pretrage-item-cena {
+	position: relative;
+
+	input {
+		width: 67px;
+		display: inline-block;
+		margin-right: 2px;
+		background: #f9f9f9;
+		border: 1px solid #c0c0c0;
+		padding: 8px;
+		height: 30px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	&::after {
+		content: '\20AC';
+		position: absolute;
+		right: -12px;
+		top: 22px;
+		font-size: 18px;
+	}
+}
+
+.detaljna-pretraga-btn {
+	// display: none; // REMOVE THIS
+	font-size: 12px;
+	font-family: 'Open Sans';
+	text-align: center;
+	width: 690px;
+	margin-left: -15px;
+	float: left;
+	background: #eee;
+	
+	a {
+		background: #d9d9d9;
+		padding: 0 10px 2px 10px;
+		color: $color-text;
+		position: relative;
+
+		@include hover-active-focus {
+			background: darken(#d9d9d9, 5%);
+
+			&::after,
+			&::before {
+				border-top-color: darken(#d9d9d9, 5%);
+			}
+		}
+
+		&::after {
+			content: '';
+	    position: absolute;
+	    right: -10px;
+	    top: 0;
+	    width: 0;
+	    height: 0;
+	    border-top: 19px solid #d9d9d9;
+	    border-right: 10px solid transparent;
+		}
+
+		&::before {
+			content: '';
+	    position: absolute;
+	    left: -10px;
+	    top: 0;
+	    width: 0;
+	    height: 0;
+	    border-top: 19px solid #d9d9d9;
+	    border-left: 10px solid transparent;
+		}
+	}
+
+	i {
+		font-size: 7px;
+
+		&:first-of-type {
+			margin-right: 20px;
+		}
+
+		&:last-of-type {
+			margin-left: 20px;
+		}
+	}
+}
+
+.detaljna-pretraga-btn-zatvori {
+	@extend .detaljna-pretraga-btn;
+	display: block; // REMOVE THIS
+
+	i {
+		transform: rotate(180deg);
+	}
+
+	a {
+
+		@include hover-active-focus {
+
+			&::after,
+			&::before {
+				border-bottom-color: darken(#d9d9d9, 5%);
+			}
+		}
+
+		&::after {
+	    border-top: 0;
+	    border-bottom: 19px solid #d9d9d9;
+	    border-right: 10px solid transparent;
+		}
+
+		&::before {
+	    border-top: 0;
+	    border-bottom: 19px solid #d9d9d9;
+	    border-left: 10px solid transparent;
+		}
+	}
+}
+
+.sve-kategorije-btn {
+	float: left;
+	position: relative;
+
+	i {
+		position: absolute;
+		right: 12px;
+		top: 15px;
+	}
+
+	@include hover-active-focus {
+	  .kategorije-pretraga-mega-menu {
+	  	display: block!important;
+	  }
+	}
+}
+
+.pretraga-dropdown {
+	width: 651px;
+	float: left;
+	position: relative;
+	font-size: 16px;
+	
+	a {
+		width: 176px;
+		float: left;
+		background: $color-text;
+		height: 37px;
+		color: $color-white;
+    padding: 9px 15px;
+
+		i {
+			font-size: 7px;
+		}
+	}
+
+	input {
+		width: 440px;
+		float: left;
+		height: 37px;
+		background: #f9f9f9;
+		padding: 10px;
+		border: 1px solid #c0c0c0;
+		border-left: 0;
+		outline: none;
+	}
+
+	button {
+		float: left;
+		padding: 3px 6px 4px 7px;
+		height: 37px;
+		margin-left: -2px;
+		cursor: pointer;
+		background: $color-primary;
+		border: 0;
+		color: $color-white;
+		font-size: 24px;
+	}
+}
+
+.kategorije-pretraga-mega-menu {
+	width: 651px;
+	height: 410px;
+	position: absolute;
+	top: 37px;
+	left: 0;
+	z-index: 10;
+	border: 1px solid #c0c0c0;
+	border-top: 0;
+	background: $color-white;
+	display: none;
+}
+
+.kategorije-pretraga-mega-menu-list {
+	width: 175px;
+	float: left;
+
+	li {
+		display: block;
+
+		@include hover-active-focus {
+			a {
+				background: $color-primary;
+				color: $color-white;	
+			}
+		}
+
+		a {
+			background: $color-white;
+			font-weight: bold;
+			color: $color-text;
+			text-transform: uppercase;
+			font-size: 13px;
+			padding: 5px 15px;
+			height: auto;
+		}
+	}
+
+	li.active {
+		a {
+			background: $color-primary;
+			color: $color-white;
+		}
+	}
+}
+
+.kategorije-pretraga-mega-menu-content {
+	width: 474px;
+	float: left;
+	overflow-y: scroll;
+	height: 100%;
+	text-align: center;
+	border-left: 1px solid #c0c0c0;
+	padding-bottom: 4px;
+}
+
+
+
+.kategorije-pretraga-mega-menu-content-header {
+	font-size: 14px;
+	text-transform: uppercase;
+	width: 100%;
+	float: left;
+	padding: 2px 2px 0px 2px;
+
+
+
+	p {
+		position: relative;
+
+		&::before {
+			content: '';
+	    background: url('../img/line-pattern.png');
+	    width: 140px;
+	    height: 17px;
+	    position: absolute;
+	    left: 1px;
+	    top: 2px;
+		}
+
+		&::after {
+			content: '';
+	    background: url('../img/line-pattern.png');
+	    width: 140px;
+	    height: 17px;
+	    position: absolute;
+	    right: 2px;
+	    top: 2px;
+		}
+	}
+
+	&:nth-of-type(23) {
+		p {
+
+			&::before,
+			&::after {
+				width: 110px;
+			}
+		}
+	}
+
+}
+
+.kategorije-pretraga-mega-menu-content-item {
+	width: 100%;
+	float: left;
+}
+
+.pretraga-item {
+	width: 145px;
+	height: 70px;
+	float: left;
+	padding: 6px;
+	padding-top: 0;
+	background: #f7f7f7;
+	margin-right: 1px;
+	margin-left: 3px;
+	margin-top: 4px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+
+	@include hover-active-focus {
+		background: #ddd;
+		border: 1px solid #c0c0c0;
+
+		a {
+			background: #ddd;
+		}
+	}
+
+	a {
+		width: 100%;
+		display: block;
+		height: 100%;
+		background: #f7f7f7;
+		padding: 2px 0px 6px 0px;
+
+		i {
+			color: $color-text;
+			font-size: 34px;
+			position: static;
+		}
+	}
+
+	p {
+		color: $color-text;
+	}
+}
+
+
+.oglasi {
+	margin-top: 3px;
+	float: left;
+}
+
+.oglasi-header {
+	@extend .sidebar-header;
+}
+
+.oglasi-filter {
+	margin-top: 3px;
+	border: 1px solid #d9d9d9;
+	background: #f9f9f9;
+}
+
+.oglasi-filter-content {
+	width: 394px;
+	float: left;
+
+	a, i {
+		color: #777;
+	}
+
+	i {
+		font-size: 22px;
+		margin-right: 3px;
+	}
+
+	a {
+		padding: 4px 7px;
+
+		@include hover-active-focus {
+			color: $color-text;
+			i {
+				color: $color-text;
+			}
+		}
+	}
+
+	li {
+		border-right: 1px solid #d9d9d9;
+		margin: 0;
+	}
+}
+
+.oglasi-filter-grid {
+	@extend .oglasi-filter-content; 
+	width: 119px;
+	float: right;
+
+	i {
+		margin: 0;
+		color: #d9d9d9;
+	}
+
+	.active {
+		i {
+			color: #777;
+		}
+	}
+
+	li {
+		border-left: 1px solid #d9d9d9;
+		border-right: none;
+		position: relative;
+
+		@include hover-active-focus {
+			.tooltip {
+				display: block;
+			}
+		}
+
+		&:last-of-type {
+
+			i {
+				color: #777;
+			}
+
+			@include hover-active-focus {
+				i {
+					color: $color-text;
+				}
+			}
+
+		}
+	}
+
+	a {
+		padding: 4px 5px 4px 9px;
+	}
+}
+
+.oglasi-content {
+	float: left;
+	width: 100%;
+	height: 2233px;
+}
+
+.oglasi-content-text {
+	float: left;
+	display: block; // REMOVE THIS
+}
+
+.oglasi-content-list {
+	// display: none; // REMOVE THIS
+}
+
+
+.oglasi-content-list {
+	float: left;
+	width: 100%;
+}
+
+.oglasi-item-list {
+	float: left;
+	width: 100%;
+	padding: 3px;
+	border-bottom: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	position: relative;
+}
+
+.oglasi-item-list-img {
+	width: 168px;
+  float: left;
+  position: relative;
+}
+
+.oglasi-item-list-content {
+	float: left;
+	margin-left: 15px;
+
+	.oglasi-item-ikonice-icons {
+		font-size: 18px;
+	}
+
+	.oglasi-item-heading {
+		font-size: 18px;
+		margin-left: 0;
+	}
+
+	.oglasi-vreme {
+		position: absolute;
+		right: 10px;
+		top: 5px;
+	}
+
+	.icons-item {
+		text-align: left;
+		width: 90px;
+
+		&::after {
+			left: -17px;
+			top: 0px;
+		}
+
+		p {
+			display: inline-block;
+		}
+	}
+
+	.oglasi-items-list-akcije {
+		background: #d9d9d9;
+    position: absolute;
+    width: 170px;
+    right: 0;
+    bottom: 0;
+    padding: 0 13px;
+
+    p {
+    	display: inline-block;
+    	vertical-align: middle;
+    }
+
+
+
+    &::before {
+	    content: '';
+	    position: absolute;
+	    left: -4px;
+	    top: 0;
+	    width: 0;
+	    height: 0;
+	    border-bottom: 21px solid #d9d9d9;
+    	border-left: 4px solid transparent;
+    }
+
+    a {
+    	color: $color-text;
+    	margin-bottom: 0;
+
+    }
+
+
+    .akcija-sacuvaj {
+
+    	@include hover-active-focus {
+
+    		.star {
+
+    			i {
+    				color: #ff7800;
+    				
+    			}
+    		}
+    	}
+    }
+
+    .star {
+    	font-size: 15px;
+    	margin-right: 3px;
+    	color: $color-white;
+    }
+	}
+
+	
+
+	.oglasi-mesto {
+		margin-top: 8px;
+
+		i {
+			vertical-align: top;
+			margin-right: 3px;
+		}
+	}
+
+}
+
+.oglasi-item-list-mobilni {
+
+	.icons-item {
+		width: 80px;
+
+		&:nth-of-type(2) {
+			width: 100px;
+		}
+	}
+}
+
+.oglasi-item-list-tablet {
+
+	.icons-item {
+		width: 90px;
+
+		&:nth-of-type(2) {
+			width: 100px;
+		}
+	}
+}
+
+.oglasi-item-list-tv {
+
+	.icons-item {
+
+		&:nth-of-type(1) {
+			width: 90px;
+		}
+
+		&:nth-of-type(2) {
+			width: 110px;
+		}
+	}
+}
+
+.oglasi-item-list-foto,
+.oglasi-item-list-kamera {
+	.icons-item {
+		&:nth-of-type(2) {
+			width: 90px;
+		}
+	}
+}
+
+
+.oglasi-item-list-ostalo,
+.oglasi-item-list-servis {
+
+	.oglasi-item-ikonice-icons {
+		margin-top: 10px;
+	}
+
+	i {
+		vertical-align: top;
+	}
+
+	ul {
+
+		display: inline-block;
+		margin-left: 5px;
+
+		li {
+
+			&::after {
+				content: '/';
+				margin-left: 5px;
+			}
+
+			&:last-of-type {
+
+				&::after {
+					content: '';
+				}
+			}
+		}
+	}
+}
+
+.oglasi-items-list-cena {
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 16px;
+
+	.vrsta-cene {
+		font-weight: bold;
+		font-size: 16px;
+		display: inline-block;
+		margin-left: 13px;
+	}
+}
+
+.oglasi-item-ikonice {
+	width: 170px;
+	float: left;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	background: #f9f9f9;
+	margin-right: 3px;
+	margin-top: 3px;
+
+	a {
+		display: block;
+	}
+}
+
+.oglasi-item-tekst {
+	@extend .oglasi-item-ikonice;
+}
+
+.oglasi-item-ikonice-img {
+	position: relative;
+}
+
+.oglasi-item-tekst-img {
+	@extend .oglasi-item-ikonice-img;
+}
+
+.placen-oglas {
+	position: absolute;
+	bottom: 5px;
+	right: 3px;
+	background: url('../img/sprite.png');
+	width: 87px;
+	height: 14px;
+	background-position: 0 -26px;
+
+}
+
+.oglasi-item-heading {
+	color: $color-text;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-left: 5px;
+	font-family: 'Trebuchet MS';
+
+	@include hover-active-focus {
+		color: $color-primary;
+	}
+}
+
+.oglasi-item-ikonice-icons {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.oglasi-items-tekst-lokacija {
+	@extend .oglasi-items-ikonice-lokacija;
+}
+
+.oglasi-items-tekst-akcije {
+	@extend .oglasi-items-ikonice-akcije;
+}
+
+.oglasi-items-tekst-cena {
+	@extend .oglasi-items-ikonice-cena;
+}
+
+.oglasi-item-tekst-tekst {
+	ul {
+		margin-left: 5px;
+    margin-top: 4px;
+    height: 51px;
+
+    li {
+    	display: block;
+    }
+	}
+}
+
+.oglasi-item-ikonice-icons-other {
+
+	float: left;
+  margin-top: 17px;
+  margin-bottom: 10px;
+
+	i {
+		font-size: 20px;
+		margin-left: 8px;
+		float: left;
+	}
+
+	ul {
+		float: left;
+		width: 140px;
+		font-size: 13px;
+
+		i {
+			font-size: 8px;
+			vertical-align: middle;
+			display: inline-block;
+			margin-right: 4px;
+			margin-top: 2px;
+		}
+	}
+
+
+}
+
+.icons-item {
+	width: 55px;
+	float: left;
+	text-align: center;
+	margin-top: 7px;
+	position: relative;
+
+	&:nth-of-type(2) {
+		width: 135px;
+	}
+
+	&:nth-of-type(3) {
+		width: 200px;
+	}
+
+	p {
+		margin-top: 2px;
+	}
+
+	i {
+		font-size: 21px;
+		vertical-align: top;
+	}
+
+	&:first-of-type {
+		&::after {
+			display: none;
+		}
+	}
+
+	&::after {
+		content: '';
+		width: 1px;
+		height: 30px;
+		background: #d9d9d9;
+		position: absolute;
+		left: 0;
+		top: 6px;
+	}
+
+	&:last-of-type {
+		border-right: 0;
+	}
+
+}
+
+.oglasi-items-ikonice-cena {
+	float: left;
+	width: 100%;
+	margin-left: 8px;
+	margin-top: 8px;
+
+}
+
+.cena {
+	font-family: 'Trebuchet MS';
+	background: $color-text;
+	color: $color-white;
+	font-weight: bold;
+	display: inline-block;
+	padding: 0px 5px;
+	position: relative;
+
+	&::after {
+		content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: -4px;
+    border-top: 20px solid #101010;
+    border-right: 4px solid transparent;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 3px;
+		height: 100%;
+		background: $color-primary;
+		left: -3px;
+		top: 0;
+	}
+}
+
+.cena-akcija {
+	font-family: 'Trebuchet MS';
+	color: #aaa;
+	display: inline-block;
+	font-weight: bold;
+	margin-left: 10px;
+	position: relative;
+
+	&::after {
+		content: '';
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		background: #aaa;
+	}
+}
+
+.oglasi-items-ikonice-lokacija {
+	margin-top: 5px;
+	margin-left: 8px;
+	width: 150px;
+	float: left;
+
+	i {
+		margin-right: 3px;
+	}
+}
+
+.oglasi-mesto {
+	float: left;
+}
+
+.oglasi-vreme {
+	float: right;
+}
+
+.oglasi-items-ikonice-akcije {
+	@extend .oglasi-items-ikonice-lokacija;
+	background: #d9d9d9;
+	width: 100%;
+	margin-left: 0;
+	padding: 4px 7px 1px 7px;
+
+	span {
+		color: $color-white;
+	}
+
+	label {
+		vertical-align: top;
+		cursor: pointer;
+	}
+
+	.star {
+		display: inline-block;
+    font-size: 15px;
+    margin-top: -4px;
+    vertical-align: middle;
+	}
+
+	a {
+		color: $color-text;
+
+		&.sacuvan-oglas {
+			.star {
+				i {
+					color: #ff7800;
+				}
+			}
+		}
+
+    @include hover-active-focus {
+
+    	.star {
+
+    		i {
+					color: #ff7800;
+    			
+    		}
+    	}
+    }
+	}
+}
+
+.akcija-sacuvaj {
+	float: left;
+}
+
+.akcija-uporedi {
+	float: right;
+}
+
+.akcija-sacuvaj,
+.akcija-uporedi {
+
+	@include hover-active-focus {
+
+		i {
+			color: $color-primary;
+		}
+	}
+}
+
+.oglasi-pagination {
+	background: #f9f9f9;
+	border: 1px solid #d9d9d9;
+	float: left;
+	width: 100%;
+	font-size: 16px;
+	padding: 15px;
+
+	ul {
+		text-align: center;
+	}
+
+	li.active {
+		a {
+			background: $color-primary;
+			color: $color-white;
+
+			&::after {
+				border-top-color: $color-primary;
+			}
+
+			&::before {
+				border-bottom-color: $color-primary;
+			}
+		}
+	}
+
+	a {
+		background: $color-text;
+		color: $color-white;
+		padding: 2px 7px;
+		position: relative;
+		margin-right: 5px;
+
+		@include hover-active-focus {
+			background: $color-primary;
+			color: $color-white;
+
+			&::after {
+				border-top-color: $color-primary;
+			}
+
+			&::before {
+				border-bottom-color: $color-primary;
+			}
+		}
+
+		&::after {
+			content: '';
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    top: 0;
+	    right: -4px;
+	    border-top: 23px solid #101010;
+	    border-right: 4px solid transparent;
+		}
+
+		&::before {
+			content: '';
+	    position: absolute;
+	    left: -4px;
+	    top: 0;
+	    width: 0;
+	    height: 0;
+	    border-bottom: 23px solid #101010;
+	    border-left: 4px solid transparent;
+		}
+	}
+}
+
+
+/*
+ * OGLAS STYLE
+*/
+
+.oglasi-datum {
+	
+	float: right;
+	font-size: 13px;
+
+	i {
+		color: #ccc;
+		margin-right: 5px;
+		vertical-align: top;
+	}
+
+	p {
+		display: inline-block;
+		color: #ccc!important;
+	}
+}
+
+.oglasi-content-oglas {
+	width: 100%;
+	float: left;
+	height: 2613px;
+	border: 1px solid #c0c0c0;
+}
+
+.oglasi-headline {
+
+	float: left;
+	width: 100%;
+	padding: 8px 15px;
+	position: relative;
+
+	.oglasi-headline-model {
+		font-family: 'Tahoma';
+		font-weight: bold;
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+
+	.cena-akcija {
+		font-family: 'Tahoma';
+		font-size: 18px;
+		margin-left: 15px;
+	}
+	.cena {
+		font-family: 'Tahoma';
+		font-size: 18px;
+		padding: 2px 6px 2px 13px;
+
+		&::after {
+			border-top: 30px solid #101010;
+		}
+
+		&::before {
+			width: 4px;
+			left: 0;
+		}
+	}
+
+	.vrsta-cene {
+		display: inline-block;
+		margin-left: 15px;
+		font-family: 'Tahoma';
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+}
+
+.oglasi-headline-back {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	text-align: right;
+
+	a {
+		color: $color-text;
+		margin-bottom: 8px;
+
+		p {
+			display: inline-block;
+			text-transform: uppercase;
+		}
+
+		@include hover-active-focus {
+			color: $color-primary
+		}
+	}
+
+	i {
+		font-size: 20px;
+		vertical-align: bottom;
+	}
+}
+
+.oglasi-info-and-img {
+	float: left;
+	width: 100%;
+}
+
+.oglasi-imgs {
+	float: right;
+	margin-right: 8px;
+	margin-top: 4px;
+	position: relative;
+
+	.ukupno-slika {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: rgba(0,0,0, .5);
+		padding: 1px 6px;
+		color: #fff;
+
+		&::after {
+			content: '';
+	    position: absolute;
+	    left: -4px;
+	    top: 0;
+	    width: 0;
+	    height: 0;
+	    border-bottom: 28px solid rgba(0,0,0, .5);
+	    border-left: 4px solid transparent;
+		}
+
+		p {
+			display: inline-block;
+			font-family: 'Tahoma';
+			font-weight: bold;
+			font-size: 18px;
+			vertical-align: middle;
+		}
+
+		i {
+			margin-left: 5px;
+			vertical-align: middle;
+		}
+	}
+
+}
+
+.oglasi-share {
+	float: right;
+  margin-right: 6px;
+  margin-top: 3px;
+}
+
+.oglasi-ponuda {
+	background: #f9f9f9;
+  border: 1px solid #ddd;
+  float: right;
+  width: 250px;
+  margin-right: 8px;
+  margin-top: 3px;
+  padding: 5px 10px 10px 10px;
+}
+
+.oglasi-ponuda-header {
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+
+	p {
+		display: inline-block;
+	}
+
+	i {
+		font-size: 16px;
+		vertical-align: top;
+		margin-left: 7px;
+	}
+}
+
+.oglasi-ponuda-content {
+
+	.cena {
+		margin-left: 4px;
+	}
+
+	.vrsta-cene {
+		font-family: 'Trebuchet MS';
+		font-weight: bold;
+		display: inline-block;
+		margin-left: 8px;
+	}
+
+	.unos-ponude {
+		margin-top: 8px;
+
+		input {
+			background: #e91c23;
+			border: 0;
+			outline: none;
+			color: $color-white;
+			display: inline-block;
+			font-family: 'Trebuchet MS';
+			font-size: 12px;
+			font-weight: bold;
+			padding: 6px 5px;
+			width: 92px;
+		}
+
+		a {
+			background: $color-text;
+			color: $color-white;
+			font-family: 'Trebuchet MS';
+			font-size: 12px;
+			font-weight: bold;
+			padding: 6px;
+			margin-left: 6px;
+			position: relative;
+
+			@include hover-active-focus {
+				background: $color-primary;
+
+				&::after {
+					border-bottom: 26px solid $color-primary;
+				}
+			}
+
+			&::after {
+				content: '';
+		    position: absolute;
+		    left: -5px;
+		    top: 0;
+		    width: 0;
+		    height: 0;
+		    border-bottom: 26px solid $color-text;
+		    border-left: 5px solid transparent;
+			}
+		}
+
+		.test {
+
+			position: relative;
+			display: inline-block;
+
+			&::after {
+				content: '';
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    top: 0;
+		    right: -5px;
+		    border-top: 26px solid #e91c23;
+		    border-right: 5px solid transparent;
+			}
+		}
+
+		::-webkit-input-placeholder {
+		   color: $color-white;
+		}
+
+		:-moz-placeholder {
+		   color: $color-white;  
+		}
+
+		::-moz-placeholder {
+		   color: $color-white;  
+		}
+
+		:-ms-input-placeholder {  
+		   color: $color-white;  
+		}
+
+		i {
+			font-size: 23px;
+	    vertical-align: bottom;
+	    margin-left: 6px;
+	    color: #a4a4a4;
+		}
+	}
+}
+
+.oglasi-cijena-registracije {
+	@extend .oglasi-ponuda;
+  padding: 0;
+
+	.oglasi-cijena-registracije-content {
+		padding: 5px 10px 10px 10px;
+	}
+
+	li {
+		display: block;
+		color: #333;
+
+		span {
+			text-transform: uppercase;
+			font-weight: bold;
+			background: $color-primary;
+			font-family: 'Open Sans';
+			font-size: 11px;
+			color: $color-white;
+			padding: 0px 5px 2px 5px;
+			border-radius: 4px;
+
+			&:first-of-type {
+				margin-left: 7px;
+			}
+		}
+	}
+
+	.registracija-info-cijena,
+	.registracija-info-broj {
+		font-weight: bold;
+	}
+}
+
+.oglasi-cijena-registracije-header {
+
+	background: $color-text;
+	color: $color-white;
+	padding: 3px;
+
+	p {
+		display: inline-block;
+		font-family: 'Trebuchet MS';
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+
+	i {
+		margin-left: 5px;
+		margin-right: 2px;
+		vertical-align: middle;
+		font-size: 16px;
+	}
+}
+
+.oglasi-info-left {
+	float: left;
+	width: 423px;
+}
+
+.oglasi-info-right {
+	float: left;
+  width: 267px;
+}
+
+
+.oglasi-glavne-informacije {
+	float: left;
+	width: 98%;
+	background: #f9f9f9;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	margin-top: 5px;
+	margin-left: 6px;
+}
+
+.oglasi-glavne-informacije-item {
+	float: left;
+	width: 135px;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px 0;
+	border-right: 1px solid #ddd;
+
+	&:last-of-type {
+		border-right: 0;
+	}
+
+	i {
+		font-size: 30px;
+		margin-bottom: 3px;
+	}
+
+	p {
+		line-height: 120%;
+	}
+
+	p:first-of-type {
+		font-family: 'Tahoma';
+		font-weight: bold;
+		font-size: 20px;
+	}
+}
+
+.oglasi-osnovne-informacije {
+	float: left;
+	width: 423px;
+	padding: 0 15px 15px 15px;
+
+	&:first-of-type {
+		padding-top: 15px;
+	}
+
+	li {
+		display: block;
+		margin-bottom: 4px;
+
+		p {
+			display: inline-block;
+			width: 150px;
+		}
+
+		span {
+			font-family: 'Trebuchet MS';
+			font-weight: bold;
+		}
+	}
+
+	.rezolucija {
+		color: #666;
+	}
+}
+
+.zamena-list {
+	display: inline-block;
+  float: right;
+  width: 242px;
+  margin-top: 4px;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  color: #666;
+}
+
+.oglasi-dodatne-informacije {
+	@extend .oglasi-osnovne-informacije;
+
+	ul {
+		margin-top: 10px;
+	}
+}
+
+.oglasi-garancija {
+	@extend .oglasi-dodatne-informacije;
+}
+
+.oglasi-dodatna-oprema {
+	@extend .oglasi-garancija;
+	width: 100%;
+
+	i {
+		font-size: 16px;
+		margin-right: 4px;
+		vertical-align: top;
+	}
+
+	ul {
+		width: 200px;
+		display: inline-block;
+		float: left;
+	}
+}
+
+.oglasi-opis {
+	@extend .oglasi-dodatna-oprema;
+
+	.oglasi-opis-text {
+		margin-top: 10px;
+	}
+}
+
+.oglasi-info-heading {
+	background: #f1f1f1;
+	color: #333333;
+	display: inline-block;
+	font-family: 'Trebuchet MS';
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 2px 12px;
+	position: relative;
+	margin-left: -8px;
+
+	&::after {
+		content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: -4px;
+    border-top: 24px solid #f1f1f1;
+    border-right: 4px solid transparent;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 4px;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #222;
+	}
+}
+
+.oglasi-tab {
+	float: left;
+	width: 100%;
+}
+
+.oglasi-tab-header {
+	ul {
+		width: 100%;
+		float: left;
+		border-top: 1px solid #c0c0c0;
+		border-bottom: 1px solid #c0c0c0;
+	}
+
+	li {
+
+		&.active {
+			a {
+				background: $color-text;
+				color: $color-white;
+			}
+		}
+		
+		width: 172px;
+		float: left;
+		text-align: center;
+		border-right: 1px solid #c0c0c0;
+
+		&:last-of-type {
+			width: 173px;
+			border-right: 0;
+		}
+
+		&:nth-of-type(3) {
+			width: 173px;
+		}
+
+		a {
+			padding: 9px;
+			width: 100%;
+			color: $color-text;
+			background: #f9f9f9;
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 145%;
+
+			@include hover-active-focus {
+				background: $color-text;
+				color: $color-white;
+			}
+		}
+
+		i {
+			font-size: 20px;
+			vertical-align: bottom;
+			margin-right: 6px;
+		}
+	}
+
+}
+
+.oglasi-tab-content {
+	float: left;
+	width: 100%;
+	padding-left: 4px;
+
+	.oglasi-item-ikonice {
+		width: 168px;
+	}
+
+	.oglasi-item-ikonice-icons-other {
+		i {
+			margin-left: 5px
+		}
+	}
+}
+
+.oglasi-tab-content-slicni-oglasi {
+	// display: none; // REMOVE THIS
+}
+
+.oglasi-tab-content-slicni-oglasi,
+.oglasi-tab-content-registracija,
+.oglasi-tab-content-fotografije,
+.oglasi-tab-pitanja {
+
+	// display: none; // REMOVE THIS
+
+	&.active {
+		display: block;
+	}
+}
+
+.oglasi-tab-content-specifikacije {
+	// display: none; // REMOVE THIS
+	width: 99%;
+  margin-left: 2px;
+  margin-top: 8px;
+  font-size: 11px;
+  font-family: 'Open Sans';
+
+	ul {
+		border: 1px solid #c0c0c0;
+		border-bottom: 1px solid $color-primary;
+	}
+
+  li {
+  	display: block;
+  }
+
+  span {
+  	display: inline-block;
+  	padding: 2px 8px;
+  }
+
+  .naslov {
+  	width: 150px;
+  	text-align: center;
+  	background: #eee;
+  	border-bottom: 1px solid #c0c0c0;
+  	border-right: 1px solid #c0c0c0;
+  }
+
+  .podatak {
+  	border-bottom: 1px solid #c0c0c0;
+		width: 527px;
+		color: #666;
+  }
+}
+
+.oglasi-tab-content-specifikacije-item {
+	margin-bottom: 10px;
+}
+
+.specifikacije-header {
+	background: $color-text;
+	color: $color-white;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Calibri';
+	font-size: 14px;
+	text-align: center;
+	width: 147px;
+	position: relative;
+
+	&::after {
+		content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: -4px;
+    border-bottom: 20px solid $color-text;
+    border-right: 4px solid transparent;
+	}
+}
+
+.oglasi-tab-pitanja {
+	padding: 10px 5px;
+	float: left;
+}
+
+.oglasi-tab-pitanje {
+	// border: 2px solid #e2e2e2;
+	margin-bottom: 5px;
+}
+
+.oglasi-pitanje-user {
+	float: left;
+	width: 189px;
+	font-family: 'Trebuchet MS';
+	border-left: 2px solid #e2e2e2;
+	border-bottom: 2px solid #e2e2e2;
+
+	.oglasi-pitanje-user-name {
+		font-weight: bold;
+		padding: 4px 6px;
+	}
+
+	.user-avatar {
+		font-size: 45px;
+		float: left;
+		margin-top: -3px;
+	}
+
+	.user-online-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+
+    &.offline {
+    	background: #e91c23;
+    }
+
+    &.online {
+    	background: #139e00;
+    }
+	}
+
+	.user-status {
+		float: left;
+		padding: 5px 15px;
+
+		.user-online-status-text {
+			font-size: 12px;
+		}
+	}
+
+	.verifikacije-icons {
+		margin-top: 5px;
+
+		i {
+			margin-right: 5px;
+			font-size: 16px;
+		}
+	}
+}
+
+.oglasi-pitanje-user-name {
+	background: #ddd;
+}
+
+.oglasi-pitanje-user-status {
+  float: left;
+  width: 100%;
+  padding: 0px 3px 3px 6px;
+}
+
+.oglasi-pitanje-msg {
+	float: left;
+  width: 483px;
+  min-height: 86px;
+  background: #f9f9f9;
+  padding: 5px 10px;
+	border: 2px solid #e2e2e2;
+}
+
+.oglasi-pitanje-msg-header {
+	color: #999;
+	position: relative;
+	float: left;
+	width: 100%;
+
+	&::after {
+		content: '';
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-right: 10px solid #f9f9f9;
+    border-bottom: 14px solid transparent;
+    position: absolute;
+    left: -20px;
+    top: -6px;
+	}
+
+}
+
+.pitanje-date {
+	float: left;
+	display: inline-block;
+}
+
+.pitanje-akcije {
+	float: right;
+	display: inline-block;
+
+	a {
+		color: #999;
+		margin-left: 3px;
+
+		@include hover-active-focus {
+			color: $color-text;
+		}
+	}
+
+	i {
+		vertical-align: top;
+		font-size: 16px;
+	}
+}
+
+.oglasi-tab-pitanja-item {
+	float: left;
+}
+
+.oglasi-pitanje-msg-content {
+	float: left;
+	width: 100%;
+	margin-top: 3px;
+	font-size: 12px;
+	font-family: 'Open Sans';
+}
+
+.oglasi-tab-odgovor {
+	@extend .oglasi-tab-pitanje;
+	width: 640px;
+  float: right;
+  position: relative;
+
+  &::before {
+  	content: '';
+  	background: url('../img/arrow.png') no-repeat;
+  	width: 20px;
+    height: 75px;
+    position: absolute;
+    left: -20px;
+  }
+
+	.oglasi-pitanje-msg {
+		background: #ffffeb;
+		width: 451px;
+		min-height: 86px;
+	}
+
+	.oglasi-pitanje-msg-header {
+
+		&::after {
+			border-right-color: #ffffeb;
+		}
+	}
+}
+
+.oglasi-tab-postavi-pitanje {
+
+	float: left;
+	
+	.oglasi-pitanje-user {
+		border: 2px solid #e2e2e2;
+		border-right: 0;
+	}
+
+	.oglasi-pitanje-msg {
+		border-top: 2px solid #e2e2e2;
+		border-right: 2px solid #e2e2e2;
+		border-bottom: 2px solid #e2e2e2;
+		width: 483px;
+		height: 120px;
+	}
+
+	textarea {
+		width: 450px;
+		height: 65px;
+		border: 1px solid #e2e2e2;
+		margin-top: 5px;
+		margin-left: 5px;
+		padding: 5px;
+		font-family: 'Open Sans';
+		font-size: 12px;
+		resize: none;
+	}
+
+	::-webkit-input-placeholder {
+	  color: #ddd;
+	}
+
+	:-moz-placeholder {
+	   color: #ddd;  
+	}
+
+	::-moz-placeholder {
+	   color: #ddd;
+	}
+
+	:-ms-input-placeholder {  
+	   color: #ddd;  
+	}
+
+	button {
+		float: right;
+		margin-top: 2px;
+		margin-right: 12px;
+		font-family: 'Trebuchet MS';
+		font-size: 14px;
+		font-weight: bold;
+		border: 0;
+		background: $color-text;
+		color: $color-white;
+		padding: 5px;
+		position: relative;
+		cursor: pointer;
+
+		@include hover-active-focus {
+			background: $color-primary;
+
+			&::before {
+				border-bottom-color: $color-primary;
+			}
+
+			&::after {
+				border-top-color: $color-primary;
+			}
+		}
+
+		&::before {
+			content: '';
+		  position: absolute;
+		  left: -4px;
+		  top: 0;
+		  width: 0;
+		  height: 0;
+		  border-bottom: 26px solid $color-text;
+		  border-left: 4px solid transparent;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 0;
+			right: -4px;
+			border-top: 26px solid $color-text;
+			border-right: 4px solid transparent;
+		}
+	}
+
+}
+
+.oglasi-tab-registruj-se {
+	float: left;
+	font-family: 'Trebuchet MS';
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	border-top: 2px solid $color-text;
+	padding: 8px;
+
+	a {
+		position: relative;
+		background: $color-text;
+		color: $color-white;
+		padding: 5px 15px;
+		margin-right: 5px;
+		margin-top: 10px;
+
+		@include hover-active-focus {
+			background: $color-primary;
+
+			&::before {
+				border-bottom-color: $color-primary;
+			}
+
+			&::after {
+				border-top-color: $color-primary;
+			}
+		}
+
+
+
+		&::before {
+			content: '';
+		  position: absolute;
+		  left: -4px;
+		  top: 0;
+		  width: 0;
+		  height: 0;
+		  border-bottom: 26px solid $color-text;
+		  border-left: 4px solid transparent;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 0;
+			right: -4px;
+			border-top: 26px solid $color-text;
+			border-right: 4px solid transparent;
+		}
+	}
+}
+
+/*
+ * REGISTRACIJA STYLE
+*/
+
+.registracija-header {
+	@extend .oglasi-header;
+}
+
+.registracija-content {
+	@extend .oglasi-content-oglas;
+	height: auto;
+
+	.heading {
+		font-size: 18px;
+		font-family: 'Tahoma';
+		font-weight: bold;
+		margin-top: 10px;
+	}
+}
+
+.registracija-content-upper {
+	text-align: center;
+	padding: 0px 100px;
+	margin-bottom: 20px;
+}
+
+.registracija-item {
+	text-align: center;
+	width: 327px;
+	float: left;
+	border: 1px solid #c0c0c0;
+	margin-left: 12px;
+	margin-bottom: 12px;
+
+	a {
+		color: $color-text;
+		padding: 20px 5px;
+
+		@include hover-active-focus {
+			background: #eee;
+		}
+	}
+
+	i {
+		font-size: 70px;
+	}
+}
+
+.registracija-profila-tabovi {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.registracija-profila-tabovi-item {
+	float: left;
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+	font-size: 16px;
+	border: 1px solid #c0c0c0;
+	border-left: 0;
+	border-top: 0;
+	width: 115px;
+	height: 100px;
+	position: relative;
+
+	&:last-of-type {
+		border-right: 0;
+	}
+
+	@include hover-active-focus {
+
+		border-bottom: 0;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 1px;
+			top: 100%;
+			width: 59px;
+			height: 1px;
+			background: #c0c0c0;
+			transform: rotate(15deg) translateY(7px);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 1px;
+			top: 100%;
+			height: 1px;
+			width: 59px;
+			background: #c0c0c0;
+			transform: rotate(-15deg) translateY(7px);
+		}
+	}
+
+	i {
+		font-size: 60px;
+	}
+
+	a {
+		color: $color-text;
+		width: 100%;
+		height: 100%;
+
+		@include hover-active-focus {
+			color: $color-primary;
+		}
+	}
+
+	&.active {
+		border-bottom: 0;
+
+
+
+		a {
+			color: $color-primary;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0px;
+			top: 100%;
+			width: 60px;
+			height: 1px;
+			background: #c0c0c0;
+			transform: rotate(15deg) translateY(7px);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0px;
+			top: 100%;
+			height: 1px;
+			width: 60px;
+			background: #c0c0c0;
+			transform: rotate(-15deg) translateY(7px);
+		}
+
+
+	}
+
+	
+}
+
+.registracija-content-form {
+	float: left;
+	width: 100%;
+	padding: 30px 25px;
+}
+
+.registracija-content-heading {
+
+	margin-bottom: 20px;
+
+	.heading {
+		font-family: 'Tahoma';
+		font-weight: bold;
+		font-size: 18px;
+	}
+}
+
+.registracija-korisnik-form {
+	width: 317px;
+	float: left;
+	position: relative;
+
+	label {
+		display: block;
+		margin-bottom: 1px;
+	}
+
+	input[type="text"],
+	input[type="number"],
+	input[type="password"],
+	input[type="email"] {
+		display: inline-block;
+		width: 143px;
+		background: #f9f9f9;
+		border: 1px solid #c0c0c0;
+		border-radius: 3px;
+		padding: 8px;
+	}
+
+	input[type="radio"] {
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		outline: none;
+		color: #999;
+
+		&:checked {
+			color: $color-text;
+		}
+
+		&::after {
+			font-family: 'fontelicons';
+			position: absolute;
+			top: -3px;
+			left: 0px;
+			font-size: 60px;
+			background: #fff;
+		}
+
+		&.zenski-pol-radio {
+			&::after {
+				content: "\E052";
+			}
+		}
+
+		&.muski-pol-radio {
+			&::after {
+				content: "\E051";
+			}
+		}
+
+	}
+
+	.form-group {
+		width: 143px;
+		float: left;
+		margin-right: 30px;
+		margin-bottom: 15px;
+		position: relative;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+
+}
+
+.required {
+	color: #e91c23;
+}
+
+.lead-label {
+	color: #ababab;
+	margin-left: 3px;
+}
+
+
+
+.form-pol {
+	float: left;
+
+	.form-group {
+		width: 40px;
+
+		p {
+			margin-top: 47px;
+			margin-left: 10px;
+		}
+	}
+
+	label {
+		&:first-of-type {
+			float: left;
+			width: 100%;
+		}
+
+	}
+
+}
+
+
+.form-email,
+.form-ime-prezime,
+.form-pol,
+.form-drzava,
+.form-lokacija,
+.form-telefon,
+.form-sifra {
+	width: 100%;
+	float: left;
+}
+
+.form-submit-btn {
+	background: $color-text;
+	color: $color-white;
+	border: 0;
+	width: 100%;
+	text-align: center;
+	padding: 11px;
+	text-transform: uppercase;
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 10px;
+	border-radius: 4px;
+
+	@include hover-active-focus {
+		background: $color-primary;
+	}
+}
+
+.btn-submit-lead {
+	line-height: 120%;
+	margin-top: 5px;
+
+	a {
+		color: $color-text;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: #7b7b7b;
+		}
+	}
+}
+
+.info-polje {
+	border: 1px solid #c0c0c0;
+	position: absolute;
+	width: 303px;
+	left: 341px;
+	padding: 0px 15px 15px 15px;
+
+	.heading {
+		color: $color-primary;
+		font-family: 'Calibri';
+		position: relative;
+		display: block;
+
+		&::after {
+			content: '';
+			display: block;
+			margin: 7px 0;
+			width: 100%;
+			height: 1px;
+			background: #ccc;
+		}
+	}
+}
+
+.info-prezime {
+	display: none; // REMOVE THIS
+}
+
+.info-pol {
+	display: none; // REMOVE THIS
+	top: 70px;
+}
+
+.info-drzava,
+.info-grad {
+	display: none; // REMOVE THIS
+	top: 190px;
+}
+
+.info-lokacija,
+.info-ulica {
+	display: none; // REMOVE THIS
+	top: 260px;
+}
+
+.info-telefon,
+.info-aplikacije {
+	display: none;
+	top: 320px;
+}
+
+.info-email {
+	display: none;
+	top: 385px;
+}
+
+.info-sifra {
+	display: none;
+	top: 460px;
+}
+
+
+.sms-potvrda {
+	float: left;
+
+	.potvrda-msg {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		color: $color-white;
+		padding: 5px 30px;
+		font-size: 16px;
+		text-align: center;
+		background: #e91c23;
+		border-radius: 4px;
+	}
+
+
+	.unesi-kod-input {
+		border: 1px solid $color-text!important;
+		padding: 10px!important;
+		width: 155px!important;
+		text-align: center!important;
+	}
+	
+	.potvrdi-btn {
+		width: 155px;
+		height: 37px;
+		margin-left: 3px;
+		background: $color-text;
+		color: $color-white;
+		border: 0;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		border-radius: 3px;
+		cursor: pointer;
+		font-family: 'Calibri';
+
+		@include hover-active-focus {
+			background: $color-primary;
+		}
+	}
+
+}
+
+.korisnicki-profil-small-heading {
+	float: left;
+	width: 100%;
+	font-family: 'Trebuchet MS';
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: $color-text;
+	}
+}
+
+.form-postanski-broj {
+	float: left;
+	width: 100%;
+}
+
+.form-datum-rodjenja {
+	float: left;
+
+	select {
+		width: 100px;
+		float: left;
+		margin-right: 8px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+.korisnicki-profil {
+
+	.info-adresa-stanovanja {
+		top: 80px;
+	}
+	
+	.info-ime,
+	.info-prezime {
+		display: none; // REMOVE THIS
+	}
+
+	.info-drzava,
+	.info-grad,
+	.info-lokacija,
+	.info-ulica {
+		top: 190px;
+		display: none; // REMOVE THIS
+	}
+
+	.info-email,
+	.info-telefon,
+	.info-aplikacije {
+		top: 360px;
+		display: none; // REMOVE THIS
+	}
+
+	.info-sifra {
+		display: none; // REMOVE THIS
+		top: 795px;
+	}
+
+
+}
+
+.info-verifikacija {
+	position: absolute;
+  width: 303px;
+  left: 341px;
+  background: blue;
+  padding: 4px;
+  color: $color-text;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 3px;
+
+  &.info-verifikacija-false {
+  	background: #ffb400;
+
+  	a {
+  		color: $color-text;
+  		padding: 3px;
+  		display: block;
+  	}
+
+  	@include hover-active-focus {
+  		background: #15b500;
+  	}
+  }
+
+  &.info-verifikacija-true {
+  	background: #15b500;
+  }
+}
+
+.info-verifikacija-adresa {
+	top: 265px;
+}
+
+.info-verifikacija-mobilni {
+	top: 380px;
+}
+
+.info-verifikacija-mobilni2 {
+	top: 446px;
+}
+
+.info-verifikacija-email {
+	top: 512px;
+}
+
+.info-verifikacija-sifra {
+	top: 843px;
+}
+
+.registracija-table {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+
+	table {
+		border-collapse: collapse;
+		margin-bottom: 5px;
+	}
+
+	td,
+	th {
+		border: 1px solid #b3b3b3;
+		padding: 10px 5px;
+		text-align: center;
+	}
+
+	tr:nth-of-type(11) {
+		td:last-of-type {
+			padding: 10px 2px;
+		}
+	}
+
+	th {
+		border: 1px solid #004171;
+	}
+
+	th {
+		font-family: 'Trebuchet MS';
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: bold;
+		background: $color-primary;
+		color: $color-white;
+	}
+
+	i {
+		font-size: 18px;
+	}
+
+	.ico-nema {
+		color: #999;
+	}
+
+	tr {
+
+		&:nth-of-type(even) {
+			background: #eee;
+		}
+
+		td {
+			font-family: 'Trebuchet MS';
+			font-weight: bold;
+
+			&:first-of-type {
+				font-family: 'Calibri';
+				font-weight: normal;
+				text-align: left;
+				padding: 10px 19px 10px 10px;
+			}
+		}
+	}
+
+	.popust-highlight-10 {
+			color: #ff7800;
+	}
+
+	.popust-highlight-20 {
+		color: #e91c23;
+	}
+
+	.pro {
+		position: relative;
+		padding-left: 40px;
+
+		&::after {
+			content: '';
+    	background: url(../img/sprite.png) no-repeat;
+    	background-position: 0px -40px;
+    	width: 34px;
+    	height: 12px;
+    	position: absolute;
+    	top: 3px;
+    	left: 0;
+		}
+	}
+
+	strong {
+		text-transform: uppercase;
+	}
+
+	a {
+		background: $color-primary;
+		border-radius: 4px;
+		color: $color-white;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 5px;
+
+		@include hover-active-focus {
+			background: $color-text;
+		}
+	}
+}
+
+.tabela-izabrano {
+	a {
+		background: #999;
+	}
+
+
+	.izabran-paket {
+		position: relative;
+		padding: 0;
+		background: #e91c23;
+		a {
+			background: #e91c23;
+			padding: 3px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 100%;
+			left: 0;
+			border-left: 36px solid transparent;
+			border-right: 36px solid transparent;
+			border-top: 10px solid #e91c23;
+		}
+	}
+}
+
+.dodaj-logo {
+	background: #999;
+	color: $color-white;
+	text-transform: uppercase;
+	padding: 6px 10px;
+  border-radius: 3px;
+  margin-top: 18px;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  font-size: 16px;
+
+  i {
+  	vertical-align: bottom;
+  	margin-right: 5px;
+  }
+
+  @include hover-active-focus {
+  	background: $color-primary;
+  }
+}
+
+/*
+ * NOVOSTI STYLE
+*/
+
+.novosti-header {
+	@extend .registracija-header;
+}
+
+.novosti-content {
+	@extend .registracija-content;
+	padding: 10px;
+}
+
+.novosti-item {
+	float: left;
+	width: 100%;
+
+	&::after {
+		content: '';
+		height: 1px;
+		width: 100%;
+		display: block;
+		background: #bbb;
+		margin: 5px auto 10px auto;
+		float: left;
+	}
+
+	&:last-of-type {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.novosti-item-img {
+	float: left;
+	width: 200px;
+	position: relative;
+
+	.ima-foto {
+		background: url('../img/sprite.png') no-repeat;
+		width: 80px;
+    height: 25px;
+    background-position: 0 -52px;
+    position: absolute;
+    bottom: 5px;
+    left: -4px;
+	}
+
+	.ima-video {
+		background: url('../img/sprite.png') no-repeat;
+		width: 80px;
+    height: 25px;
+    background-position: 0 -77px;
+    position: absolute;
+    bottom: 5px;
+    left: -4px;
+	}
+}
+
+.novosti-item-content {
+  float: left;
+	width: 456px;
+  margin-left: 10px;
+  color: #666;
+}
+
+.novosti-item-heading {
+	a {
+		font-family: 'Tahoma';
+		font-size: 22px;
+		font-weight: bold;
+		color: $color-text;
+
+		@include hover-active-focus {
+			color: $color-primary;
+		}
+	}
+
+	.heading-lead {
+		font-size: 16px;
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 14px;
+		}
+		i {
+			vertical-align: top;
+			font-size: 14px;
+		}
+	}
+}
+
+.novosti-item-text {
+	a {
+		color: $color-text;
+		font-size: 12px;
+		margin-left: 3px;
+		vertical-align: bottom;
+
+		@include hover-active-focus {
+			color: $color-primary;
+		}
+	}
+}
+
+.novosti-item-kategorije {
+	margin-top: 5px;
+
+	a {
+		background: #999;
+		color: $color-white;
+		text-transform: uppercase;
+		font-size: 13px;
+		letter-spacing: 1px;
+		padding: 0px 2px;
+		position: relative;
+		margin-left: 13px;
+		display: inline-block;
+    height: 14px;
+    line-height: 100%;
+
+    @include hover-active-focus {
+    	background: #888;
+
+    	&::before {
+    		border-right-color: #888;
+    	}
+    }
+
+		&::before {
+			content: '';
+			width: 0px;
+			height: 0px;
+			border-top: 7px solid transparent;
+			border-right: 9px solid #999;
+			border-bottom: 7px solid transparent;
+			left: -9px;
+			position: absolute;
+		}
+
+		&::after {
+			content: '';
+			width: 3px;
+			height: 3px;
+			border-radius: 50%;
+			position: absolute;
+			background: $color-white;
+			left: -3px;
+    	top: 5px;
+
+		}
+	}
+}
+
+.novosti-pagination {
+	@extend .oglasi-pagination;
+	border-top: 0;
+}
+
+.novost-heading {
+
+	margin-bottom: 5px;
+
+	.novost-main-heading {
+		font-family: 'Tahoma';
+		font-weight: bold;
+		font-size: 38px;
+		color: $color-primary;
+		line-height: 110%;
+		margin-bottom: 5px;
+	}
+
+	.heading-lead {
+		font-size: 16px;
+		color: #666;
+
+		i {
+			vertical-align: bottom;
+			font-size: 17px;
+		}
+
+		.date {
+			margin-right: 15px;
+		}
+	}
+
+	.novosti-item-kategorije {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	.novost-img {
+		margin-top: 10px;
+		position: relative;
+
+		.novost-img-info {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			color: $color-white;
+			background: rgba(0, 0, 0, .6);
+			padding: 5px 13px;
+
+			&::after {
+				content: '';
+		    position: absolute;
+		    left: -3px;
+		    top: 0;
+		    width: 0;
+		    height: 0;
+		    border-bottom: 30px solid rgba(0, 0, 0, .6);
+		    border-left: 3px solid transparent;
+			}
+		}
+	}
+}
+
+.novost-povezane-vesti-heading {
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	background: #eee;
+	display: inline-block;
+	padding: 5px 8px;
+	position: relative;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #eee;
+  margin-bottom: -1px;
+
+	&::before {
+		content: '';
+    height: 1px;
+    width: 35px;
+    background: #ddd;
+    position: absolute;
+    transform: rotate(77deg);
+    right: -22px;
+    bottom: 16px;
+	}
+
+	&::after {
+		content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: -8px;
+    border-bottom: 34px solid #eee;
+    border-right: 8px solid transparent;
+	}
+
+
+}
+
+.novost-povezane-vesti-content {
+	background: #eee;
+	padding: 7px 5px 5px 5px;
+	border: 1px solid #ddd;
+}
+
+.novosti-povezane-vesti-item {
+	float: left;
+	width: 213px;
+	height: 70px;
+	margin-right: 6px;
+
+	a {
+		color: $color-text;
+
+		@include hover-active-focus {
+			color: $color-primary;
+		}
+	}
+}
+
+.novosti-povezane-vesti-item-img {
+	float: left;
+	margin-right: 5px;
+}
+
+.novosti-povezane-vesti-item-text {
+	float: left;
+	width: 110px;
+
+	p {
+		line-height: 125%;
+	}
+}
+
+.podeli-vest {
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+
+	p,
+	.podeli-vest-mreze {
+		display: inline-block;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: bold;
+		margin-right: 15px;
+		vertical-align: top;
+		line-height: 200%;
+	}
+
+	.kontakt-icon {
+
+		&:last-of-type {
+			margin-right: 5px;
+		}
+	}
+}
+
+.novost-text {
+	margin-top: 10px;
+	font-size: 16px;
+	text-align: justify;
+
+	p {
+		margin-top: 15px;
+		float: left;
+		line-height: 130%;
+	}
+
+	.novost-text-img {
+
+		p {
+			width: 410px;
+		}
+
+		img {
+			margin-top: 15px;
+			margin-left: 15px;
+		}
+	}
+}
+
+.novost-izvor {
+	float: left;
+	font-size: 16px;
+	margin-top: 15px;
+
+	i {
+		vertical-align: top;
+		font-size: 18px;
+		margin-right: 5px;
+	}
+
+	p {
+		display: inline-block;
+	}
+}
+
+.novost-tagovi {
+	float: left;
+	width: 100%;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 10px;
+
+	p {
+		display: inline-block;
+		font-weight: bold;
+		margin-right: 5px;
+	}
+
+	a {
+		margin-right: 5px;
+		color: $color-primary;
+		font-weight: bold;
+
+		@include hover-active-focus {
+			color: $color-text;
+		}
+	}
+}
+
+.najcitanije-u-sedam-dana {
+	float: left;
+	width: 100%;
+	margin-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+.najcitanije-u-sedam-dana-item {
+	position: relative;
+	width: 220px;
+	float: left;
+	margin-right: 5px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	a {
+		color: $color-white;
+
+		@include hover-active-focus {
+			span {
+				background: rgba(233, 28, 35, .6);
+			}
+		}
+
+		span {
+			background: rgba(0, 0, 0, .6);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 5px;
+			font-weight: bold;
+			font-size: 16px;
+		}
+	}
+}
+
+.novost-komentari {
+	@extend .oglasi-tab-content;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.novost-komentari-header {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+
+	p {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: bold;
+		margin-top: 3px;
+		margin-left: 5px;
+		float: left;
+
+		i {
+			vertical-align: top;
+			margin-right: 5px;
+		}
+	}
+
+	select {
+		float: right;
+		font-family: 'Open Sans';
+		font-size: 11px;
+		border-radius: 0;
+		width: 170px;
+	}
+}
+
+.novost-komentari-postavi-pitanje {
+	@extend .oglasi-tab-postavi-pitanje;
+
+	.novost-komentari-msg {
+		min-height: 120px;
+	}
+}
+
+.novost-komentari-user {
+	@extend .oglasi-pitanje-user;
+}
+
+.novost-komentari-user-name {
+	@extend .oglasi-pitanje-user-name;
+}
+
+.novost-komentari-user-status {
+	@extend .oglasi-pitanje-user-status;
+}
+
+.novost-komentari-msg {
+	@extend .oglasi-pitanje-msg;
+	width: 481px!important;
+
+	button {
+		margin-right: 7px;
+	}
+}
+
+.novost-komentari-msg-header {
+	@extend .oglasi-pitanje-msg-header;
+}
+
+.novost-komentari-item {
+	@extend .oglasi-tab-pitanja-item;
+	margin-top: 5px;
+}
+
+.novost-komentari-pitanje {
+	@extend .oglasi-tab-pitanje;
+
+	.novost-komentari-msg {
+		width: 481px!important;
+		min-height: 88px!important;
+	}
+}
+
+.novost-komentari-odgovor {
+	@extend .oglasi-tab-odgovor;
+
+	.novost-komentari-msg {
+		width: 451px!important;
+		min-height: 88px!important;
+	}
+}
+
+.novost-komentari-akcije {
+	margin-top: 15px;
+}
+
+.novost-komentari-akcije-item {
+	display: inline-block;
+	font-family: 'Open Sans';
+	font-size: 11px;
+	text-transform: uppercase;
+	margin-right: 8px;
+
+	&:first-of-type {
+		background: #999;
+		padding: 1px 5px;
+		border-radius: 3px;
+
+		@include hover-active-focus {
+			background: #101010;
+		}
+
+		a {
+			color: $color-white;
+		}
+
+		i {
+			color: $color-white;
+		}
+	}
+
+	&:nth-of-type(2) {
+			a {
+				color: #4a8c4b;
+
+				@include hover-active-focus {
+					color: darken(#4a8c4b, 10%);
+				}
+			}
+		}
+
+		&:nth-of-type(3) {
+			a {
+				color: #c83a3f;
+
+				@include hover-active-focus {
+					color: darken(#c83a3f, 10%);
+				}
+			}
+
+			i {
+				vertical-align: middle;
+			}
+		}
+
+	p {
+		display: inline-block;
+	}
+
+	i {
+		vertical-align: top;
+	}
+
+}
+
+.odgovori-na-pitanje {
+	@extend .novost-komentari-odgovor;
+	float: right;
+
+	textarea {
+		width: 420px;
+	}
+}
+
+.slanje-komentara-neregistrovan {
+	float: left;
+	width: 100%;
+	border: 2px solid #e2e2e2;
+}
+
+.slanje-komentara-neregistrovan-header {
+	background: #e2e2e2;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+}
+
+.slanje-komentara-neregistrovan-content {
+	float: left;
+	width: 100%;
+	padding: 10px;
+
+	.neregistrovan-korisnik-form {
+		width: 100%;
+
+		.form-inputs {
+			float: left;
+			margin-right: 20px;
+		}
+
+		.form-textarea {
+			float: left;
+
+			textarea {
+				width: 300px;
+				height: 167px;
+				margin-top: 18px;
+				border: 1px solid #c0c0c0;
+				padding: 5px;
+				font-family: 'Open Sans';
+				font-size: 12px;
+				resize: none;
+				border-radius: 1px;
+			}
+		}
+
+		.form-footer {
+			float: left;
+			width: 100%;
+
+			p {
+				float: left;
+				width: 410px;
+				line-height: 115%;
+			}
+		}
+
+		.sms-potvrda {
+			.potvrda-msg {
+				width: 315px;
+				margin-right: 23px;
+				margin-top: 0;
+			}
+
+			input,
+			button {
+				width: 145px!important;
+				height: 45px!important;
+			}
+		}
+
+		.neregistrovan-bez-potvrde {
+			display: none;
+		}
+
+		.neregistrovan-form-submit-btn {
+			float: right;
+			margin-top: 2px;
+			margin-right: 12px;
+			font-family: 'Trebuchet MS';
+			font-size: 14px;
+			font-weight: bold;
+			border: 0;
+			background: $color-text;
+			color: $color-white;
+			padding: 5px;
+			position: relative;
+			cursor: pointer;
+
+			@include hover-active-focus {
+				background: $color-primary;
+
+				&::before {
+					border-bottom-color: $color-primary;
+				}
+
+				&::after {
+					border-top-color: $color-primary;
+				}
+			}
+
+			&::before {
+				content: '';
+			  position: absolute;
+			  left: -4px;
+			  top: 0;
+			  width: 0;
+			  height: 0;
+			  border-bottom: 26px solid $color-text;
+			  border-left: 4px solid transparent;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 0;
+				right: -4px;
+				border-top: 26px solid $color-text;
+				border-right: 4px solid transparent;
+			}
+		}
+	}
+}
+
+.novost-registruj-se {
+	@extend .oglasi-tab-registruj-se;
+}
+
+
+/*
+ * SMS OGLASI STYLE
+*/
+
+.sms-oglasi-header {
+	@extend .registracija-header;
+}
+
+.pretraga-sms-oglasa {
+	float: left;
+	width: 100%;
+	border: 1px solid $color-text;
+	border-top: 0;
+	padding: 15px 18px;
+
+	p {
+		line-height: 120%;
+		color: #333;
+	}
+}
+
+.pretraga-sms-oglasa-header {
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+
+	.heading {
+		float: left;
+	}
+
+	.broj-oglasa {
+		float: right;
+
+		span {
+			color: $color-primary;
+		}
+	}
+
+}
+
+.pretraga-sms-oglasa-form {
+
+	margin-top: 5px;
+
+	select {
+		width: 140px;
+		display: inline-block;
+		margin-right: 20px;
+		border-radius: 0;
+		color: #666;
+		height: 34px;
+	}
+
+	input[type="text"] {
+		display: inline-block;
+		width: 291px;
+    height: 34px;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #c0c0c0;
+    outline: none;
+	}
+
+	button {
+    position: relative;
+    top: 4px;
+    padding: 3px 6px 4px 7px;
+    height: 34px;
+    margin-left: -4px;
+    cursor: pointer;
+    background: #e91c23;
+    border: 0;
+    color: #fff;
+    font-size: 24px;
+
+    i {
+    	vertical-align: top;
+    }
+	}
+
+	::-webkit-input-placeholder {
+		   color: #ccc;
+		   font-family: 'Calibri';
+		   font-size: 14px;
+		}
+
+		:-moz-placeholder {
+		   color: #ccc;
+		   font-family: 'Calibri';
+		   font-size: 14px;  
+		}
+
+		::-moz-placeholder {
+		   color: #ccc;
+		   font-family: 'Calibri';
+		   font-size: 14px;
+		}
+
+		:-ms-input-placeholder {  
+		   color: #ccc;
+		   font-family: 'Calibri';
+		   font-size: 14px;
+		}
+}
+
+.sms-oglasi-content {
+	@extend .registracija-content;
+	padding: 3px 1px;
+}
+
+.sms-novosti-pagination {
+	@extend .novosti-pagination;
+}
+
+.sms-oglasi-item {
+	float: left;
+	height: 78px;
+	padding: 3px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	background: #f9f9f9;
+	border: 1px solid #d9d9d9;
+
+	&.premium-sms-oglas-item {
+		background: #ffffeb;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.sms-oglasi-item-img {
+	float: left;
+	width: 45px;
+
+	i {
+		width: 40px;
+		height: 40px;
+		background: $color-white;
+		border: 1px solid #d9d9d9;
+		border-radius: 6px;
+		font-size: 27px;
+		text-align: center;
+	}
+}
+
+.sms-oglasi-item-content {
+	float: left;
+	width: 631px;
+	font-family: 'Open Sans';
+	font-size: 12px;
+	position: relative;
+	height: 100%;
+}
+
+.sms-oglasi-item-footer {
+	width: 100%;
+	margin-top: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	.sms-oglasi-mobilni {
+		float: left;
+	}
+
+	.sms-oglasi-date {
+		float: right;
+		margin-right: 5px;
+	}
+}
+
+.prodavnice-header {
+	@extend .sms-oglasi-header;
+}
+
+.pretraga-prodavnica {
+	@extend .pretraga-sms-oglasa;
+}
+
+.pretraga-prodavnica-header {
+	@extend .pretraga-sms-oglasa-header;
+
+}
+
+.broj-prodavnica {
+	@extend .broj-oglasa;
+}
+
+.pretraga-prodavnica-form {
+	@extend .pretraga-sms-oglasa-form;
+}
+
+.prodavnice-content {
+	float: left;
+	width: 100%;
+}
+
+.prodavnica-item {
+	width: 228px;
+	height: 101px;
+	float: left;
+	border: 1px solid #666;
+	background: #fff;
+	margin-top: 3px;
+	margin-right: 3px;
+	font-family: 'Trebuchet MS';
+	position: relative;
+
+	&:nth-of-type(3n) {
+		width: 230px;
+		margin-right: 0;
+	}
+
+	.prodavnica-header {
+		width: 100%;
+		background: #f9f9f9;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		border-bottom: 1px solid #666;
+
+		a {
+			color: $color-text;
+
+			@include hover-active-focus {
+				color: $color-primary;
+			}
+		}
+	}
+
+	.prodavnica-content {
+		padding: 2px;
+	}
+
+	.prodavnica-img {
+		float: left;
+		width: 104px;
+	}
+
+	.prodavnica-info {
+		float: left;
+		width: 117px;
+		padding: 5px;
+
+		a {
+			color: $color-text;
+		}
+	}
+
+	.prodavnica-status {
+		font-size: 12px;
+
+		.prodavnica-online-status {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			display: inline-block;
+			margin-right: 5px;
+
+			&.offline {
+	    	background: #e91c23;
+	    }
+
+	    &.online {
+	    	background: #139e00;
+	    }
+		}
+	}
+
+	.prodavnica-broj-artikala {
+		display: inline-block;
+		background: #eee;
+		border-radius: 4px;
+		margin: 9px 10px;
+		width: 83px;
+		text-align: center;
+
+		a {
+			padding: 3px 5px;
+		}
+
+		@include hover-active-focus {
+			background: $color-primary;
+
+			a {
+				color: $color-white;
+			}
+		}
+	}
+
+	.prodavnica-lokacija {
+
+		position: absolute;
+		bottom: 3px;
+
+		i {
+			vertical-align: middle;
+			margin-right: 3px;
+		}
+
+		p {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	&.pro-prodavnica {
+		background: #fffff0;
+
+		.prodavnica-img {
+			position: relative;
+			border: 1px solid #d2d2d2;
+
+			&::after {
+				content: '';
+		    background: url(../img/sprite.png) no-repeat;
+		    background-position: 0px -40px;
+		    width: 34px;
+		    height: 12px;
+		    position: absolute;
+		    top: 5px;
+		    left: 0;
+			}
+		}
+	}
+}
+
+.pretraga-oglasa-prodavnice-header {
+	@extend .pretraga-prodavnica-header;
+	padding: 15px;
+	padding-bottom: 0;
+}
+
+/**
+ *
+ * ADRESAR STYLES
+ *
+ */
+
+.registruj-firmu {
+	color: $color-text;
+	font-weight: bold;
+	text-decoration: underline;
+
+	@include hover-active-focus {
+		text-decoration: underline;
+		color: $color-primary;
+	}
+}
+
+.pretraga-adresar-form {
+	@extend .pretraga-prodavnica-form;
+
+	select {
+		margin-right: 5px;
+	}
+
+	input[type="text"] {
+		width: 173px;
+	}
+}
+
+.adresar-content {
+	@extend .prodavnice-content;
+}
+
+.adresar-item {
+	@extend .prodavnica-item;
+
+	&.pro-adresar {
+		@extend .pro-prodavnica;
+	}
+}
+
+.adresar-header {
+	@extend .prodavnica-header;
+}
+
+.adresar-content {
+	@extend .prodavnica-content;
+
+	.adresar-img {
+		@extend .prodavnica-img;
+	}
+
+	.adresar-info {
+		@extend .prodavnica-info;
+	}
+
+	.adresar-status {
+		@extend .prodavnica-status;
+	}
+
+	.adresar-online-status {
+		@extend .prodavnica-online-status;
+	}
+
+	.adresar-broj-oglasa {
+		@extend .prodavnica-broj-artikala;
+
+		a {
+			font-family: 'Trebuchet MS';
+			font-size: 12px;
+			padding: 3px 1px!important;
+			
+		}
+	}
+
+	.adresar-lokacija {
+		@extend .prodavnica-lokacija;
+	}
+}
+
+.prikazi-mapu-btn {
+	@extend .detaljna-pretraga-btn;
+	text-transform: uppercase;
+	font-size: 11px;
+	margin-left: -18px;
+	margin-top: 10px;
+
+	a {
+		&::after,
+		&::before {
+			border-top: 17px solid #d9d9d9;
+		}
+	}
+}
+.sakrij-mapu-btn {
+	@extend .detaljna-pretraga-btn-zatvori;
+	text-transform: uppercase;
+	font-size: 11px;
+	margin-left: -18px;
+	margin-top: 10px;
+
+	a {
+		&::after,
+		&::before {
+			border-bottom: 17px solid #d9d9d9;
+		}
+	}
+}
+
+.pretraga-adresara {
+	@extend .pretraga-prodavnica;
+	padding-bottom: 0;
+}
+
+.adresar-map {
+	position: relative;
+	float: left;
+	border: 1px solid #101010;
+	border-top: 0;
+}
+
+.adresar-map-akcije {
+	position: absolute;
+	width: 56px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.4);
+
+	div {
+		width: 46px;
+		height: 46px;
+		background: url('../img/sprite-adresar.png');
+		margin: 3px auto;
+		cursor: pointer;
+	}
+
+	.sve {
+		@include hover-active-focus {
+			background-position: -46px 0;
+		}
+	}
+	
+	.servis {
+		background-position: 0 -46px;
+		@include hover-active-focus {
+			background-position: -46px -46px;
+		}
+	}
+	
+	.otkup {
+		background-position: 0 -92px;
+		@include hover-active-focus {
+			background-position: -46px -92px;
+		}
+	}
+	
+	.prodavci {
+		background-position: 0 -138px;
+		@include hover-active-focus {
+			background-position: -46px -138px;
+		}
+	}
+	
+	.t-mobile {
+		background-position: 0 -184px;
+		@include hover-active-focus {
+			background-position: -46px -184px;
+		}
+	}
+
+	.telenor {
+		background-position: 0 -230px;
+		@include hover-active-focus {
+			background-position: -46px -230px;
+		}
+	}
+
+	.m-tel {
+		background-position: 0 -276px;
+		@include hover-active-focus {
+			background-position: -46px -276px;
+		}
+	}
+	
+}
+
+.adresar-pregled-header {
+	@extend .prodavnice-header;
+	float: left;
+	width: 100%;
+}
+
+.adresar-pregled-content {
+	float: left;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #c0c0c0;
+	
+	.adresar-img {
+		width: 200px;
+		float: left;
+		height: 100%;
+
+		a {
+			color: $color-text;
+			width: 200px;
+			margin-top: 3px;
+			background: #eee;
+			padding: 2px 5px;
+			border-radius: 3px;
+			line-height: 24px;
+
+			i {
+				font-size: 18px;
+				vertical-align: middle;
+				margin-right: 5px;
+			}
+
+			@include hover-active-focus {
+				background: $color-primary;
+				color: $color-white;
+			}
+		}
+	}
+
+	.adresar-info {
+		float: left;
+		width: 450px;
+		margin-left: 10px;
+
+		p {
+			text-align: justify;
+		}
+
+	}
+}
+
+.adresar-info-header {
+	text-transform: uppercase;
+	margin-bottom: 5px;
+
+	p {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 3px;
+	}
+
+	li {
+
+		&::after {
+			content: '/';
+			color: $color-primary;
+			margin: 0px 5px;
+		}
+
+		&:last-of-type {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+}
+
+.adresar-oglasi {
+	margin-top: 0;
+
+	.oglasi-content {
+		height: auto;
+	}
+
+
+	.oglasi-filter {
+		margin-top: 0;
+	}
+
+	.oglasi-content-ikonice {
+		// display: none; // REMOVE THIS
+	}
+
+	.oglasi-content-list {
+		display: block;
+	}
+}
+
+.fotografije-content {
+	width: 100%;
+	float: left;
+	margin-top: 3px;
+}
+
+
+
+.fotografije-item {
+	width: 170px;
+	margin-right: 4px;
+	float: left;
+	margin-bottom: 4px;
+
+	&:nth-of-type(4n) {
+		margin-right: 0;
+	}
+}
+
+.oglasi-adresar-osnovne-informacije {
+	min-height: 335px;
+
+	.oglasi-opis {
+		padding-left: 0px;
+	}
+}
+
+.oglasi-adresar-tab-header {
+
+	li {
+		width: 230px;
+
+		&:last-of-type {
+			width: 230px;
+		}
+	}
+}
+
+.oglasi-adresar-content-oglas {
+	height: auto;
+}
+
+/*
+ * PORUKE STYLE
+*/
+
+.poruke-header {
+	@extend .registracija-header;
+}
+
+.poruke-pretraga {
+	float: left;
+	width: 100%;
+	background: #eee;
+	border: 1px solid #d9d9d9;
+	padding: 5px;
+
+	.link-nazad {
+		height: 34px;
+		height: 34px;
+		background: $color-white;
+		color: $color-text;
+		text-transform: uppercase;
+		border: 1px solid #d9d9d9;
+		font-family: 'Trebuchet MS';
+		font-weight: bold;
+		padding: 5px;
+		float: right;
+		line-height: 23px;
+
+		i {
+			font-size: 20px;
+			margin-right: 5px;
+			margin-top: -3px;
+		}
+
+		@include hover-active-focus {
+			color: $color-white;
+			background: $color-primary;
+		}
+	}
+
+	.link-do-oglasa {
+		height: 34px;
+		background: $color-white;
+		color: $color-text;
+		border: 1px solid #d9d9d9;
+		font-family: 'Trebuchet MS';
+		font-weight: bold;
+		padding: 5px 10px;
+
+		i {
+			font-size: 20px;
+			margin-right: 5px;
+		}
+
+		@include hover-active-focus {
+			color: $color-white;
+			background: $color-primary;
+		}
+	}
+
+	option {
+		height: 20px;
+		border: 1px solid #d9d9d9;
+	}
+
+	select, option {
+		font-weight: bold;
+		width: 220px;
+		border-radius: 0;
+		text-transform: uppercase;
+		font-family: 'Trebuchet MS';
+
+		option {
+			position: relative;
+
+				span {
+					&::after {
+						content: "aaa";
+						position: absolute;
+						left: 5px;
+						top: 1px;
+						width: 10px;
+						height: 10px;
+						font-size: 15px;
+					}
+					
+				}
+		}
+	}
+
+	.input-pretraga {
+		display: inline-block;
+		float: right;
+
+		input {
+			height: 34px;
+			padding: 10px;
+			width: 180px;
+			border: 1px solid #c0c0c0;
+		}
+
+		button {
+			background: none;
+			border: 0;
+			margin-left: -10px;
+			cursor: pointer;
+			line-height: 32px;
+		}
+
+		i {
+			background: $color-text;
+			width: 34px;
+			height: 34px;
+			color: $color-white;
+			text-align: center;
+			font-size: 24px;
+		}
+	}
+}
+
+.poruke-akcije {
+	float: left;
+	width: 100%;
+	padding: 5px;
+	padding-right: 13px;
+	background: #f9f9f9;
+	border: 1px solid #d9d9d9;
+	border-top: 0;
+
+	a {
+		vertical-align: bottom;
+	}
+
+	label {
+		color: $color-text;
+		vertical-align: middle;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 15px;
+			width: 1px;
+			background: #d9d9d9;
+			margin: 0 10px;
+			top: 2px;
+		}
+	}
+
+	input[type='checkbox'] {
+		color: $color-text;
+		vertical-align: middle;
+		margin-right: 7px;
+	}
+}
+
+.poruke-akcije-left {
+	float: left;
+
+	p {
+		display: inline-block;
+		position: relative;
+
+		&:nth-of-type(2) {
+			margin-left: 13px;
+		}
+
+		&:first-of-type {
+			margin-left: 4px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				height: 15px;
+				width: 1px;
+				background: #d9d9d9;
+				margin: 0 7px;
+				top: 2px;
+			}
+		}
+	}
+
+	a {
+		&:last-of-type {
+			color: #999;
+			margin-left: 20px;
+
+			@include hover-active-focus {
+				color: $color-text;
+			}
+		}
+
+		&.oznaci-kao-neprocitano {
+			margin-left: 5px;
+			color: #333;
+
+			&.neprocitano {
+				color: #0077b5;
+			}
+
+			@include hover-active-focus {
+				color: #0077b5;
+			}
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+
+}
+
+.poruke-akcije-right {
+	float: right;
+
+	p {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	i {
+		vertical-align: top;
+		margin-right: 3px;
+	}
+
+	a {
+		color: #333;
+	}
+
+	.poruke-akcija-sacuvaj {
+		display: inline-block;
+		margin-right: 15px;
+
+		a {
+			@include hover-active-focus {
+				color: #ffa200;
+			}
+		}
+	}
+
+	.poruke-akcija-obrisi {
+		display: inline-block;
+
+		a {
+			@include hover-active-focus {
+				color: #e91c23;
+			}
+		}
+	}
+
+}
+
+.poruke-content {
+	width: 100%;
+	float: left;
+
+	.poruke-item {
+		width: 100%;
+		float: left;
+		height: 47px;
+		background: #f9f9f9;
+		border: 1px solid #d9d9d9;
+		border-top: 0;	
+		position: relative;	 
+
+		a {
+			color: $color-text;
+			width: 100%;
+			padding: 5px;
+			padding-right: 13px;
+			display: block;
+			height: 100%;
+
+			@include hover-active-focus {
+				background: #f0f0f0;
+
+				.poruke-item-vreme {
+					display: none;
+				}
+
+				.poruke-item-akcije {
+					display: block;
+				}
+			}
+		}
+
+		&.nova-poruka {
+			background: #fffff0;
+		}
+	}
+}
+
+.poruke-item-img {
+
+	float: left;
+	width: 70px;
+
+	input {
+		vertical-align: middle;
+	}
+
+	i {
+		font-size: 40px;
+		margin-top: -9px;
+	}
+
+	img {
+		margin-top: -2px;
+		border-radius: 5px;
+	}
+}
+
+.poruke-item-content {
+	float: left;
+	width: 500px;
+	margin-top: -3px;
+
+	.user-online-status {
+		width: 11px;
+    height: 11px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 4px;
+    vertical-align: middle;
+
+    &.offline {
+    	background: #e91c23;
+    }
+
+    &.online {
+    	background: #139e00;
+    }
+	}
+
+	.poruke-item-content-user-status {
+		p {
+			font-family: 'Trebuchet MS';
+			font-weight: bold;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	.poruke-item-content-text {
+		color: #999;
+
+		.naslov-poruke {
+			color: $color-text;
+		}
+	}
+
+}
+
+.poruke-item-vreme {
+	float: right;
+	margin-top: 9px;
+	margin-right: 4px;
+
+	p {
+		color: #333;
+		font-size: 13px;
+	}
+}
+
+.poruke-item-akcije {
+	float: right;
+	margin-top: 9px;
+	margin-right: 4px;
+
+	display: none;
+
+	span {
+		margin-left: 15px;
+
+		&:first-of-type {
+			@include hover-active-focus {
+				i {
+					color: #ffa200;
+				}
+			}
+		}
+
+		&:last-of-type {
+			@include hover-active-focus {
+				i {
+					color: #e91c23;
+				}
+			}
+		}
+
+		i {
+			color: #666;
+			font-size: 16px;
+			vertical-align: middle;
+		}
+	}
+
+}
+
+.poruke-pagination {
+	@extend .oglasi-pagination;
+	border-top: 0!important;
+}
+
+.poruke-konverzacija-content {
+	float: left;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #d9d9d9;
+	border-top: 0;
+}
+
+.moje-poruke-msg {
+
+	.oglasi-pitanje-msg {
+		width: 481px!important;
+	}
+
+	.oglasi-tab-odgovor {
+		float: left;
+		width: 100%;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	.oglasi-pitanje-msg {
+		width: 481px!important;
+
+		button {
+			margin-right: 8px;
+			padding: 5px 30px!important;
+		}
+
+
+	}
+
+	.oglasi-pitanje-msg-footer {
+		a {
+			color: $color-text;
+			margin-left: 8px;
+			margin-top: 2px;
+
+			i {
+				margin-right: 5px;
+				font-size: 18px;
+				vertical-align: bottom;
+			}
+
+			@include hover-active-focus {
+				color: $color-primary;
+			}
+		}
+	}
+
+	.prilog-slike {
+		border-top: 1px solid #d9d9d9;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		margin-top: 5px;
+
+		.prilog-slike-item {
+			margin-right: 2px;
+			display: inline-block;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+}
+
+.moji-oglasi-content {
+	@extend .novosti-content;
+	border-top: 0;
+	padding: 0;
+	min-height: 1000px;
+}
+
+.moji-oglasi-item {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #d9d9d9;
+	padding: 3px;
+
+	.moji-oglasi-item-img {
+
+		span {
+			display: none;
+		}
+	}
+
+	.placen-oglas-vreme {
+		visibility: hidden;
+	}
+
+	&.moji-oglasi-placen-oglas {
+		.moji-oglasi-item-img {
+			span {
+				display: block;
+			}
+		}
+
+		.placen-oglas-vreme {
+			visibility: visible;
+		}
+	}
+}
+
+.moji-oglasi-item-img {
+	position: relative;
+	float: left;
+	width: 168px;
+}
+
+.moji-oglasi-item-content {
+	float: left;
+	width: 516px;
+	padding: 2px 0px 0px 10px;
+
+	.moji-oglasi-item-heading {
+		font-family: 'Tahoma';
+		font-size: 18px;
+		font-weight: bold;
+		color: $color-text;
+
+		@include hover-active-focus {
+			color: $color-primary;
+		}
+	}
+}
+
+.moji-oglasi-item-content-info {
+	float: left;
+	font-family: 'Trebuchet MS';
+	color: #999;
+	font-weight: bold;
+
+	.cena,
+	.cena-akcija,
+	.vrsta-cene {
+		font-size: 16px;
+		margin-right: 8px;
+		margin-top: 2px;
+	}
+
+	.cena {
+		margin-left: 3px;
+	}
+
+	.vrsta-cene {
+		display: inline-block;
+		color: $color-text;
+	}
+}
+
+.moji-oglasi-item-content-vreme {
+	float: right;
+	text-align: right;
+	font-size: 13px;
+	color: #333;
+	padding-right: 5px;
+
+	.placen-oglas-vreme {
+		color: #e91c23;
+	}
+
+	i {
+		margin-left: 5px;
+		font-size: 15px;
+		vertical-align: top;
+	}
+
+	p {
+		margin-bottom: 5px;
+
+		&:last-of-type {
+			margin-bottom: 7px;
+		}
+
+		&:nth-of-type(2) {
+
+			i {
+				font-size: 9px;
+				margin-right: -1px;
+			}
+		}
+	}
+
+}
+
+.moji-oglasi-item-content-akcije {
+	float: left;
+	width: 100%;
+
+
+	.moji-oglasi-akcije-item {
+		display: inline-block;
+
+		&:last-of-type {
+			a {
+				padding-right: 15px;
+			}
+		}
+
+		i {
+			font-size: 18px;
+			margin-right: 2px;
+		}
+
+		a {
+			color: $color-text;
+			background: #eee;
+			border: 1px solid #d9d9d9;
+			padding: 3px 10px;
+			text-align: center;
+			font-family: 'Trebuchet MS';
+			font-weight: bold;
+
+			@include hover-active-focus {
+				color: $color-white;
+				background: $color-primary;
+			}
+		}
+	}
+
+}
+
+.javna-pitanja-item {
+	float: left;
+	width: 100%;
+	height: 63px;
+	border: 1px solid #d9d9d9;
+	border-top: 0;
+
+	&.neodgovoreno-pitanje {
+		a {
+			background: #fffff0;
+		}
+
+		.javna-pitanja-status {
+			color: #e91c23;
+		}
+	}
+
+	a {
+		padding: 3px;
+		background: #f9f9f9;
+		width: 100%;
+		color: $color-text;
+
+		@include hover-active-focus {
+			background: #f0f0f0;
+		}
+	}
+
+	
+
+}
+
+.javna-pitanja-item-content {
+	@extend .poruke-item-content;
+	width: 350px;
+	margin-left: 3px;
+	padding-top: 3px;
+
+}
+
+.javna-pitanja-item-img {
+	float: left;
+	width: 77px;
+}
+
+.javna-pitanja-status,
+.javna-pitanja-vreme {
+	float: left;
+  width: 125px;
+
+  p {
+  line-height: 56px;
+  	
+  }
+}
+
+.javna-pitanja-status {
+	text-align: center;
+}
+
+.javna-pitanja-vreme {
+	text-align: right;
+}
+
+.poruke-akcije-javna-pitanja {
+	padding-right: 5px;
+
+	.poruke-akcije-right {
+		p {
+
+			&:first-of-type {
+				margin-right: 125px;
+			}
+		}
+		
+	}
+
+}
+
+.sacuvani-oglasi-filter {
+	i {
+		font-size: 18px;
+	}
+
+	.tooltip {
+		top: 36px;
+    left: -37px;
+	}
+
+	.oglasi-filter-content {
+		li {
+			&.active {
+				a, i {
+					color: $color-text;
+				}
+
+			}
+		}
+
+	}
+
+	.oglasi-filter-grid {
+		width: 71px;
+
+		li {
+			&.active {
+				a, i {
+					color: #777;
+				}
+
+			}
+		}
+
+
+		li:last-of-type {
+
+			&.active {
+				a {
+					i {
+						color: #777;
+					}
+				}
+			}
+
+			a {
+
+				@include hover-active-focus {
+					i {
+						color: $color-text;
+					}
+				}
+
+				i {
+					color: #d9d9d9;
+					
+				}
+			}
+		}
+
+	}
+
+}
+
+.sacuvani-oglasi-content {
+	width: 100%;
+	float: left;
+	min-height: 1000px;
+}
+
+/**
+ *
+ * Sacuvane pretrage
+ *
+ */
+
+.sacuvane-pretrage-content {
+	@extend .poruke-content;
+}
+
+.sacuvane-pretrage-header {
+	@extend .poruke-header;
+}
+
+.sacuvane-pretrage-akcije {
+	@extend .poruke-akcije;
+}
+
+.sacuvane-pretrage-akcije-left {
+	@extend .poruke-akcije-left;
+
+	p {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.sacuvane-pretrage-akcije-right {
+	@extend .poruke-akcije-right;
+
+	p {
+		&:first-of-type {
+			margin-right: 120px;
+		}
+	}
+}
+
+.sacuvane-pretrage-item {
+	float: left;
+	width: 100%;
+	padding: 5px 10px;
+	border: 1px solid #d9d9d9;
+	border-top: 0;
+}
+
+.sacuvane-pretrage-item-header {
+	float: left;
+	width: 100%;
+
+	p {
+
+		&:first-of-type {
+			float: left;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-family: 'Trebuchet MS';
+		}
+	}
+
+	.akcije {
+		float: left;
+		margin-left: 340px;
+
+		a {
+			color: #666;
+			background: #f9f9f9;
+			border: 1px solid #d9d9d9;
+			border-radius: 4px;
+			padding: 2px 6px;
+			width: 75px;
+
+			&:first-of-type {
+
+				@include hover-active-focus {
+					background: $color-text;
+				}
+
+				i {
+					margin-right: 2px;
+				}
+
+			}
+
+			i {
+				vertical-align: top;
+				margin-right: 8px;
+			}
+			@include hover-active-focus {
+				background: #e91c23;
+				color: $color-white;
+			}
+		}
+	}
+
+	.vreme {
+		float: right;
+		margin-right: 3px;
+		color: #333;
+	}
+}
+
+.sacuvane-pretrage-item-content {
+	float: left;
+	width: 100%;
+
+	li {
+		display: block;
+		margin-bottom: 4px;
+
+		p {
+			display: inline-block;
+			width: 140px;
+			vertical-align: top;
+		}
+
+		span {
+			font-family: 'Trebuchet MS';
+    	font-weight: bold;
+    	display: inline-block;
+    	width: 520px;
+		}
+	}
+}
+
+.sacuvani-korisnici {
+	float: left;
+	width: 100%;
+	margin-top: 3px;
+}
+
+.sacuvani-korisnici-item {
+	float: left;
+	width: 228px;
+	border: 1px solid #d9d9d9;
+	padding: 3px 3px 3px 5px;
+	position: relative;
+	font-family: 'Trebuchet MS';
+	margin-right: 3px;
+	margin-bottom: 3px;
+
+	&:nth-of-type(3n) {
+		width: 229px;
+		margin-right: 0;
+	}
+
+	&.sacuvani-korisnici-item-prodavnica {
+		.sacuvani-korisnik-img {
+			width: 78px;
+
+			img {
+				margin-top: 2px;
+				margin-bottom: 6px;
+			}
+		}
+
+		.sacuvani-korisnik-info {
+			width: 140px;
+		}
+	}
+
+	&.pro-korisnik {
+		background: #fffff0;
+
+		.sacuvani-korisnik-info {
+			p:nth-of-type(2) {
+				position: relative;
+				display: inline-block;
+
+				&::after {
+					content: '';
+					background: url(../img/sprite.png) no-repeat;
+			    background-position: 0px -40px;
+			    width: 34px;
+			    height: 12px;
+			    position: absolute;
+			    top: 4px;
+			    right: -40px;
+				}
+			}
+		}
+	}
+
+	.obrisi-sacuvanog-korisnika {
+		position: absolute;
+		right: 4px;
+		top: 1px;
+		color: $color-text;
+
+		i {
+			font-size: 16px;
+		}
+
+		@include hover-active-focus {
+			color: #e91c23;
+		}
+	}	
+}
+
+
+.sacuvani-korisnik-img {
+
+	float: left;
+	width: 60px;
+
+	i {
+		font-size: 55px;
+		margin-top: -7px;
+	}
+}
+
+.sacuvani-korisnik-info {
+
+	float: left;
+	width: 155px;
+
+
+	p {
+		font-weight: bold;
+	}
+
+	.online-status {
+
+		font-size: 12px;
+		margin-top: 3px;
+
+		&.online {
+			span {
+				background: #139e00;
+			}
+		}
+
+		&.offline {
+			span {
+				background: #e91c23;
+			}
+		}
+
+		span {
+			width: 11px;
+	    height: 11px;
+	    display: inline-block;
+	    border-radius: 50%;
+	    vertical-align: middle;
+		}
+	}
+}
+
+.sacuvani-korisnik-lokacija-link {
+	float: left;
+	width: 100%;
+	font-size: 12px;
+
+	i {
+		vertical-align: top;
+	}
+
+	p {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.sacuvani-korisnik-lokacija {
+		float: left;
+		margin-top: 5px;
+	}
+
+	.sacuvani-korisnik-link {
+		float: right;
+
+		a {
+			color: $color-text;
+			border: 1px solid #d9d9d9;
+			background: #eee;
+			padding: 5px 13px;
+			border-radius: 3px;
+
+			@include hover-active-focus {
+				background: $color-primary;
+				color: $color-white;
+				border: 1px solid $color-primary;
+			}
+		}
+	}
+}
+
+/**
+ *
+ * Dodavanje oglasa
+ *
+ */
+
+.dodaj-oglas-content {
+	float: left;
+	width: 100%;
+	border: 1px solid #d9d9d9;
+	padding: 20px;
+
+	.heading {
+		font-family: 'Tahoma';
+		font-size: 18px;
+		font-weight: bold;
+	}
+}
+
+.dodavanje-oglasa-kategorije {
+	.pretraga-item {
+		width: 214px;
+		text-align: center;
+		margin-left: 1px;
+		margin-right: 2px;
+		margin-top: 3px;
+		font-size: 16px;
+		height: 80px;
+		padding-top: 5px;
+
+		&:nth-of-type(3n) {
+			margin-right: 0;
+			width: 213px;
+		}
+	}
+
+	.kategorije-pretraga-mega-menu-content-item {
+		position: relative;
+		padding-bottom: 4px;
+
+		&:last-of-type {
+			&::after {
+				display: none;
+			}
+		}
+
+		&::after {
+			content: '';
+			background: $color-text;
+			position: absolute;
+			left: 1px;
+			bottom: -2px;
+			width: 647px;
+			height: 1px;
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+	}
+
+	.kategorije-pretraga-mega-menu-content-header {
+		padding: 0;
+		margin-top: 2px;
+
+		p {
+			text-align: center;
+			color: $color-primary;
+
+			&::after,
+			&::before {
+				width: 246px;
+			}
+		}
+
+		&:nth-of-type(23) {
+			
+			p {
+				&::before,
+				&::after {
+					width: 200px;
+				}
+			}
+		}
+	}
+
+}
+
+.dodavanje-oglasa-search {
+	float: left;
+	width: 100%;
+}
+
+.izaberi-kategoriju {
+	float: left;
+	width: 180px;
+	background: $color-text;
+	color: $color-white;
+	padding: 5px 10px;
+	height: 37px;
+	position: relative;
+
+	i {
+		font-size: 20px;
+		margin-right: 5px;
+	}
+
+	p {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 16px;
+	}
+
+	.ili {
+		position: absolute;
+    background: white;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    line-height: 24px;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid $color-text;
+    font-size: 14px;
+    font-weight: bold;
+	}
+
+}
+
+.dodavanje-oglasa-form {
+
+	float: left;
+	width: 467px;
+
+	input {
+		float: left;
+		width: 432px;
+		height: 37px;
+		padding: 15px 15px 15px 20px;
+		background: #f9f9f9;
+		border: 1px solid #c0c0c0;
+	}
+
+	button {
+		float: left;
+	  padding: 3px 6px 4px 7px;
+	  height: 37px;
+	  margin-left: -2px;
+	  cursor: pointer;
+	  background: #e91c23;
+	  border: 0;
+	  color: #fff;
+	  font-size: 24px;
+		
+	}
+}
+
+.dodavanje-oglasa-kategorije-dropdown {
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #c0c0c0;
+
+	.kategorije-pretraga-mega-menu {
+		border-top: 1px solid #c0c0c0;
+	}
+}
+
+.heading-lead {
+	margin-bottom: 10px;
+}
+
+.dodavanje-oglasa-form-podaci {
+
+	@extend .registracija-korisnik-form;
+
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+
+	.form-group {
+		margin-bottom: 20px;
+		float: left;
+		margin-right: 26px;
+
+		&:nth-of-type(4n+3) {
+			margin-right: 0;
+		}
+	}
+
+
+}
+
+.form-group-fullWidth {
+	width: 100%!important;
+
+	input {
+		width: 100%!important;
+	}
+}
+
+.input-addon {
+	background: #ccc;
+  color: $color-text;
+  float: left;
+  width: 40px;
+  height: 34px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  line-height: 32px;
+}
+
+.oglas-form-header {
+	width: 100%;
+	float: left;
+	color: $color-primary;
+	text-transform: uppercase;
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid $color-text;
+	padding-bottom: 5px;
+}
+
+.dodatna-oprema-checkbox {
+	float: left;
+	margin-bottom: 20px;
+	width: 170px;
+
+	&:nth-of-type(4n) {
+		width: 120px;
+	}
+
+	label {
+		display: inline-block;
+		vertical-align: top;
+	}
+} 
+
+
+.form-group-inputs {
+	width: 170px;
+	float: left;
+
+	input {
+		float: none;
+		display: block;
+	}
+}
+
+.form-group-textarea {
+	float: left;
+	width: 480px;
+
+	.textarea-form-group {
+		width: 100%;
+	}
+
+	textarea {
+		background: #f9f9f9;
+		border: 1px solid #c0c0c0;
+		border-radius: 3px;
+		padding: 8px;
+		width: 100%;
+		height: 106px;
+		font-family: 'Calibri';
+		resize: none;
+	}
+}
+
+.dodaj-model-btn {
+	float: left;
+	width: 100%;
+	color: $color-text;
+
+	@include hover-active-focus {
+		color: $color-primary;
+	}
+
+	span {
+		color: $color-primary;
+		font-weight: bold;
+	}
+}
+
+.radio-form-group {
+
+	float: left;
+	width: 100px;
+
+	input[type="radio"] {
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #c0c0c0;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    -webkit-appearance: none;
+    vertical-align: middle;
+
+		&::after {
+	    position: relative;
+			background: #c0c0c0;
+	    border-radius: 50%;
+	    content: '';
+	    display: block;
+	    left: 3px;
+	    top: 3px;
+	    height: 10px;
+	    width: 10px;
+		}
+
+		&:checked {
+
+			&::after {
+				background: $color-primary;
+			}
+		}
+	}
+
+	label {
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+}
+
+.form-group-file {
+	float: left;
+	width: 100%;
+	height: 116px;
+	background: #f9f9f9;
+	border: 2px dashed #c0c0c0;
+
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+	text-align: center;
+
+	a {
+		background: $color-text;
+		color: $color-white;
+		padding: 13px;
+		border-radius: 3px;
+		margin-top: 35px;
+		margin-right: 5px;
+
+		@include hover-active-focus {
+			background: $color-primary;
+		}
+	}
+}
+
+.napomena-slike {
+	float: left;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.tipovi-oglasa {
+	float: left;
+	width: 100%;
+}
+
+.tip-oglasa-item {
+	float: left;
+	width: 205px;
+	height: 320px;
+	background: #f9f9f9;
+	border: 1px solid #c0c0c0;
+	position: relative;
+	margin-right: 17px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	a {
+		background: $color-text;
+		color: $color-white;
+		padding: 8px 30px;
+		border-radius: 3px;
+		font-size: 18px;
+		font-weight: bold;
+		text-transform: uppercase;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 10px;
+
+		@include hover-active-focus {
+			background: $color-primary;
+		}
+	}
+}
+
+.tip-oglasa-naziv {
+	color: #ff7800;
+	text-transform: uppercase;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	padding: 3px 10px;
+	margin-top: 15px;
+	background: $color-white;
+}
+
+.tip-oglasa-cena {
+	text-align: center;
+	font-size: 60px;
+}
+
+.tip-oglasa-lista {
+	padding: 0px 10px;
+
+	li {
+		margin-bottom: 10px;
+
+		span {
+			position: relative;
+			color: #ff7800;
+			font-weight: bold;
+			border-bottom: 1px solid #ff7800;
+		}
+	}
+}
+
+.kontakt-podaci { 
+	float: left;
+	width: 100%;
+
+	border: 1px solid #c0c0c0;
+
+	.kontakt-podaci-header {
+		font-family: 'Trebuchet MS';
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+		float: left;
+		width: 100%;
+
+		a {
+			width: 50%;
+			float: left;
+			background: #f9f9f9;
+			padding: 10px;
+			color: $color-text;
+			border-bottom: 1px solid #c0c0c0;
+
+			@include hover-active-focus {
+				background: #f1f1f1;
+			}
+
+			&.active {
+				background: $color-white;
+				border-bottom: $color-white;
+			}
+
+			&:first-of-type {
+				border-right: 1px solid #c0c0c0;
+			}
+
+		}
+	}
+
+	.kontakt-podaci-content {
+		padding: 20px;
+		float: left;
+		width: 100%;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+
+		.form-group-login {
+
+			width: 290px;
+
+			&:nth-of-type(2) {
+				margin-right: 0!important;
+			}
+
+			label {
+				margin-bottom: 4px;
+			}
+
+			input {
+				border-radius: 0;
+				background: $color-white;
+				border: 1px solid #dcdae5;
+				width: 253px;
+			}
+
+			span {
+				color: $color-primary;
+			}
+
+			i {
+				width: 37px;
+				height: 34px;
+		    margin-top: -2px;
+		    text-align: center;
+		    font-size: 18px;
+		    line-height: 31px;
+		    border: 1px solid #dcdae5;
+		    border-right: 0;
+			}
+		}
+	}
+
+	.form-group {
+		width: 185px;
+		margin-right: 26px!important;
+
+		input, select {
+			width: 100%;
+		}
+
+		&:nth-of-type(2) {
+			margin-right: 80px!important;
+		}
+
+		&:nth-of-type(5),
+		&:nth-of-type(8) {
+			margin-right: 0!important;
+		}
+
+	}
+
+	.select-with-checkbox {
+		float: left;
+
+		input {
+			width: auto;
+		}
+
+		label {
+			width: 182px;
+		}
+
+		.select-dropdown {
+			width: 180px;
+		}
+	}
+}
+
+.btn-oglas-submit {
+	float: left;
+	width: 100%;
+	font-family: 'Trebuchet MS';
+	font-size: 22px;
+	font-weight: bold;
+	background: $color-text;
+	border: 0;
+	outline: 0;
+	box-shadow: 0;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: $color-white;
+	padding: 10px;
+	border-radius: 3px;
+
+	@include hover-active-focus {
+		background: $color-primary;
+	}
+}
+

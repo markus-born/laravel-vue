@@ -1,0 +1,150 @@
+/*
+ * Footer styles
+*/
+
+footer {
+	float: left;
+	background: $color-text;
+	color: $color-white;
+	margin-top: 2px;
+	width: 100%;
+
+	p {
+		margin: 0;
+	}
+
+	li {
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	a {
+		color: $color-white;
+
+		@include hover-active-focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+.prodajete-tehniku {
+	height: 88px;
+	p {
+		display: inline-block;
+		float: left;
+		width: 164px;
+	}
+
+}
+
+
+.dodaj-oglas-btn {
+	background: $color-primary;
+	padding: 5px 10px;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	line-height: 22px;
+	display: inline-block;
+	float: left;
+	width: 141px;
+
+	@include hover-active-focus {
+		text-decoration: none;
+		background: $color-white;
+		color: $color-primary;
+	}
+
+	i {
+		vertical-align: top;
+		font-size: 22px;
+		margin-right: 5px;
+	}
+}
+
+.footer-main {
+	padding: 10px 30px;
+
+	> div {
+		float: left;
+		width: 150px;
+		margin-right: 50px;
+
+		&:last-of-type {
+			width: 340px;
+			margin-right: 0;
+		}
+	}
+
+}
+
+.footer-social {
+
+	a {
+
+		@include hover-active-focus {
+			i {
+				color: $color-primary;
+			}
+		}
+	}
+
+	i {
+		font-size: 40px;
+		margin-right: 5px;
+	}
+}
+
+.fontel-prodaja {
+
+	ul {
+		li {
+			display: inline-block;
+
+			&::after {
+				content: '|';
+				margin-left: 5px;
+			}
+
+			&:last-of-type {
+				&::after {
+					content: '';
+				}
+			}
+		}
+	}
+}
+
+
+.footer-bottom {
+	background: #333333;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	padding: 10px 0;
+}
+
+.web-dizajn {
+	background: $color-text;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 12px;
+	padding: 5px 10px;
+
+	&::before {
+		content: '';
+    position: absolute;
+    left: -4px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 27px solid $color-text;
+    border-left: 4px solid transparent;
+	}
+
+	a {
+		color: $color-white;
+	}
+}
