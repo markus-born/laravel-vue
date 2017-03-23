@@ -1,7 +1,7 @@
 {
-  "name": "autodiler",
-  "description": "Autodiler project",
-  "author": "Fehim Dervišbegovic <fehimdervisbegovic@gmail.com>",
+  "name": "vue-node-project",
+  "description": "vue-node-project",
+  "author": "happycoder <happycoder521@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "node server",

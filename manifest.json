@@ -1,6 +1,6 @@
 {
-  "name": "Autodiler Beta",
-  "short_name": "Autodiler",
+  "name": "vue-node",
+  "short_name": "vue-node",
   "icons": [{
       "src": "/public/logo.png",
       "sizes": "265x90",
