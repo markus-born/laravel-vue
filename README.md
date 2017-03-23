@@ -1,10 +1,4 @@
-# Autodiler 
-
-Baziran je na templejtu vue-hackernews-2.0 koji u sebi uključuje Vue 2.0 + vue-router + vuex, sa SSR server-side rendering.
-
-> Napomena: Aplikacija je još uvijek u razvoju
-
-## Osobine
+# Vue 2, NodeJS project 
 
 - Server Side Rendering
   - Vue + vue-router + vuex working together
@@ -16,8 +10,6 @@ Baziran je na templejtu vue-hackernews-2.0 koji u sebi uključuje Vue 2.0 + vue-
 - Real-time List Updates with FLIP Animation
 
 ## Build Setup
-
-**Potrebno je da imate Node.js 6+**
 
 ``` bash
 # install dependencies
